@@ -1,0 +1,33 @@
+397199aa83e2fdb72059099505f357fb
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _logo = _interopRequireDefault(require("./logo.svg"));
+
+require("./App.css");
+
+var _cButton = _interopRequireDefault(require("@cogent/c-button"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function App() {
+  return _react["default"].createElement("div", {
+    className: "App"
+  }, _react["default"].createElement("header", {
+    className: "App-header"
+  }, _react["default"].createElement("img", {
+    src: _logo["default"],
+    className: "App-logo",
+    alt: "logo"
+  }), _react["default"].createElement("p", null, "Edit ", _react["default"].createElement("code", null, "src/App.js"), " and save to reload."), _react["default"].createElement(_cButton["default"], null, "Sabu")));
+}
+
+var _default = App;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkFwcC5qcyJdLCJuYW1lcyI6WyJBcHAiLCJsb2dvIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7Ozs7QUFFQSxTQUFTQSxHQUFULEdBQWU7QUFDYixTQUNFO0FBQUssSUFBQSxTQUFTLEVBQUM7QUFBZixLQUNFO0FBQVEsSUFBQSxTQUFTLEVBQUM7QUFBbEIsS0FDRTtBQUFLLElBQUEsR0FBRyxFQUFFQyxnQkFBVjtBQUFnQixJQUFBLFNBQVMsRUFBQyxVQUExQjtBQUFxQyxJQUFBLEdBQUcsRUFBQztBQUF6QyxJQURGLEVBRUUsb0RBQ08sMkRBRFAseUJBRkYsRUFLRSxnQ0FBQyxtQkFBRCxlQUxGLENBREYsQ0FERjtBQVdEOztlQUVjRCxHIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBsb2dvIGZyb20gJy4vbG9nby5zdmcnO1xuaW1wb3J0ICcuL0FwcC5jc3MnO1xuaW1wb3J0IENCdXR0b24gZnJvbSAnQGNvZ2VudC9jLWJ1dHRvbic7XG5cbmZ1bmN0aW9uIEFwcCgpIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cIkFwcFwiPlxuICAgICAgPGhlYWRlciBjbGFzc05hbWU9XCJBcHAtaGVhZGVyXCI+XG4gICAgICAgIDxpbWcgc3JjPXtsb2dvfSBjbGFzc05hbWU9XCJBcHAtbG9nb1wiIGFsdD1cImxvZ29cIiAvPlxuICAgICAgICA8cD5cbiAgICAgICAgICBFZGl0IDxjb2RlPnNyYy9BcHAuanM8L2NvZGU+IGFuZCBzYXZlIHRvIHJlbG9hZC5cbiAgICAgICAgPC9wPlxuICAgICAgICA8Q0J1dHRvbj5TYWJ1PC9DQnV0dG9uPlxuICAgICAgPC9oZWFkZXI+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IEFwcDtcbiJdfQ==

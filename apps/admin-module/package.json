@@ -1,9 +1,12 @@
 {
   "name": "@cogent/admin-module",
   "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "private": true,
   "dependencies": {
     "@cogent/c-inputgroup": "0.0.0",
+    "@cogent/c-button": "0.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -11,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "babel src -d lib --ignore spec.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

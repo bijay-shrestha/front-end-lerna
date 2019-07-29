@@ -5,7 +5,7 @@ import 'jest-styled-components';
 import CInputGroup from './CInputGroup';
 
 describe('CInputGroup', () => {
-    test('renders correctily', () => {
+    test('renders correctly', () => {
         const tree = renderer.create(<CInputGroup/>).toJSON();
         expect(tree).toMatchSnapshot();
     });

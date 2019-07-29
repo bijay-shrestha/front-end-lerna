@@ -30,8 +30,10 @@
   "scripts": {
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "compile": "lerna run compile",
-    "clean": "lerna clean --yes && rm -rf node_modules",
+    "clean": "lerna clean",
+    "clean:build": "lerna exec -- rimraf lib",
     "admin": "cd apps/admin-module && yarn start",
+    "pharmacy": "cd apps/pharmacy-module && yarn start",
     "build:admin": "lerna run --scope=@cogent/admin-module",
     "build:pharmacy": "lerna run --scope=@cogent/pharmacy",
     "build:all": "lerna exec yarn build",
@@ -39,7 +41,8 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "dev": "start-storybook -p 5555",
     "coverage": "jest --coverage",
-    "unit": "jest"
+    "unit": "jest",
+    "release": "lerna publish"
   },
   "version": "independent",
   "main": "index.js",
