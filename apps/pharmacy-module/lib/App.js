@@ -11,8 +11,6 @@ var _logo = _interopRequireDefault(require("./logo.svg"));
 
 require("./App.css");
 
-var _cInputgroup = _interopRequireDefault(require("@cogent/c-inputgroup"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -24,9 +22,7 @@ function App() {
     src: _logo.default,
     className: "App-logo",
     alt: "logo"
-  }), _react.default.createElement("p", null, "Edit ", _react.default.createElement("code", null, "src/App.js"), " and save to reload."), _react.default.createElement(_cInputgroup.default, {
-    placeholder: "This is re-used component"
-  })));
+  }), _react.default.createElement("p", null, "Edit ", _react.default.createElement("code", null, "src/App.js"), " and save to reload.")));
 }
 
 var _default = App;

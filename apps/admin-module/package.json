@@ -7,6 +7,7 @@
   "dependencies": {
     "@cogent/c-inputgroup": "0.0.0",
     "@cogent/c-button": "0.0.0",
+    "@cogent/c-dropdown": "0.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
