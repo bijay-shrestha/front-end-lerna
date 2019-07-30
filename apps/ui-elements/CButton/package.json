@@ -1,8 +1,8 @@
 {
   "name": "@cogent/c-button",
   "version": "0.0.0",
-  "main": "lib/CButton.js",
-  "module": "src/CButton.js",
+  "main": "CButton.js",
+  "module": "CButton.js",
   "author": "Bijay Shrestha",
   "license": "Cogent",
   "dependencies": {

@@ -15,6 +15,9 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "chalk": "^2.4.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-haste-map": "^24.8.1",
@@ -34,7 +37,7 @@
   "scripts": {
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "compile": "lerna run compile",
-    "clean": "lerna clean --yes && rm -rf node_modules && rimraf apps/**/lib",
+    "clean": "lerna clean --yes && rm -rf node_modules && yarn && rimraf apps/**/lib",
     "clean:build": "lerna exec -- rimraf lib",
     "admin": "cd apps/admin-module && yarn start",
     "pharmacy": "cd apps/pharmacy-module && yarn start",

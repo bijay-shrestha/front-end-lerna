@@ -1,8 +1,8 @@
 {
   "name": "@cogent/c-dropdown",
   "version": "0.0.0",
-  "main": "lib/CDropdown.js",
-  "module": "src/CDropdown.js",
+  "main": "CDropdown.js",
+  "module": "CDropdown.js",
   "author": "Bijay Shrestha",
   "license": "Cogent",
   "dependencies": {

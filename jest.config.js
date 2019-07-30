@@ -20,5 +20,8 @@ module.exports = {
         "\\.(scss|sass|css)$": "identity-obj-proxy"
     },
     moduleFileExtensions:[...defaults.moduleFileExtensions
+    ],
+    setupFiles:[
+        './jest.setup.js'
     ]
 };
