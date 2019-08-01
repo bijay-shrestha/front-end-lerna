@@ -1,10 +1,8 @@
 {
   "name": "@cogent/c-breadcrumb",
-  "version": "0.0.0",
-  "description": "Breadcrumb component",
-  "main": "CBreadcrumb.js",
+  "main":"CBreadcrumb.js",
   "module": "CBreadcrumb.js",
+  "version": "0.0.0",
   "author": "Sabu Shakya",
-  "license": "Cogent",
-  "private": true
+  "license": "COGENT"
 }

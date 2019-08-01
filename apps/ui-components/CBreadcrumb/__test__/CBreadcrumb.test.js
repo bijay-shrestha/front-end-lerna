@@ -197,11 +197,5 @@ describe('CBreadcrumb component tests', () => {
         });
     });
 
-    describe('Function Testing',()=>{
-        wrapper = shallow(<CBreadcrumb.WrappedComponent/>);
-        instance = wrapper.instance();
-
-    });
-
 });
 
