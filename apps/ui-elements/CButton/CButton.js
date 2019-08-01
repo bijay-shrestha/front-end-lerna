@@ -1,13 +1,20 @@
-import styled from 'styled-components';
+import React, {memo} from 'react';
+import {Button} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-const CButton = styled.button`
-    background: red;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 9px 36px;
-`;
+const CButton = (props) => {
+    return (
+        <>
+            <Button id={props.id}>{props.name}</Button>
+        </>
+    )
+};
 
-export default CButton;
+CButton.defaultProps = {
+    name: 'Save',
+    type: 'button',
+    onClickHandler: () => {
+    }
+};
+
+export default memo(CButton);

@@ -1,6 +1,7 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import {storiesOf} from "@storybook/react";
 
-import CButton from './';
+import CButton from './CButton';
 
-storiesOf('CButton', module).add('default', () => <CButton>{'Button'}</CButton>);
+storiesOf('CButton', module)
+    .add('default CButton', () => <CButton>Bijay</CButton>);
