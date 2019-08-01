@@ -1,10 +1,10 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _CInputGroup = _interopRequireDefault(require("../CInputGroup"));
 
 var _reactBootstrap = require("react-bootstrap");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('InputGroup Test', function () {

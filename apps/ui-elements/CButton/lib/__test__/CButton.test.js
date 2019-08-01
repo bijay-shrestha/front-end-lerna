@@ -1,10 +1,10 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _CButton = _interopRequireDefault(require("../CButton"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-describe('CButton Component', function () {
+describe('CBreadcrumb Component', function () {
   var wrapper, wrapper1;
   beforeEach(function () {
     wrapper = shallow(React.createElement(_CButton["default"], {

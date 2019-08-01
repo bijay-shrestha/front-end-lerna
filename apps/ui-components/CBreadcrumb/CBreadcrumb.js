@@ -8,7 +8,6 @@ class CBreadcrumb extends PureComponent {
         routes: [],
         currentLocation: ""
     };
-
     setCurrentLocation = path => {
         this.setState({currentLocation: path});
     };

@@ -1,6 +1,6 @@
 import CButton from '../CButton';
 
-describe('CButton Component', () => {
+describe('CBreadcrumb Component', () => {
     let wrapper, wrapper1;
     beforeEach(() => {
         wrapper = shallow(<CButton id="c-button"/>)
