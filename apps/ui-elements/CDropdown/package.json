@@ -5,6 +5,9 @@
   "module": "CDropdown.js",
   "author": "Bijay Shrestha",
   "license": "Cogent",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -14,5 +17,10 @@
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "build": "yarn clean && yarn transpile",
+    "transpile": "babel ./ --out-dir lib --copy-files --ignore **/*.story.js,**/*.spec.js"
   }
 }

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const CButton = (props) => {
     return (
-        <>
+        <React.Fragment>
             <Button id={props.id}>{props.name}</Button>
-        </>
+        </React.Fragment>
     )
 };
 
