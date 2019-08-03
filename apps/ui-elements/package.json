@@ -1,8 +1,12 @@
 {
-  "name": "@cogent/c-inputgroup",
-  "main": "CInputGroup.js",
-  "module": "CInputGroup.js",
+  "name": "@cogent/ui-elements",
   "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "module": "index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CButton from '@cogent/c-button';
+import {CButton, CDropdown} from '@cogent/ui-elements';
 
 function App() {
     return (
@@ -12,6 +12,7 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <CButton>Bijay</CButton>
+                <CDropdown/>
             </header>
         </div>
     );
