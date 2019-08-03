@@ -51,7 +51,8 @@
     "coverage": "jest --coverage",
     "unit": "jest",
     "release": "lerna publish",
-    "bootstrap": "lerna bootstrap --use-workspaces"
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "transpile": "lerna exec --parallel -- babel --root-mode upward ./ -d lib --ignore **/*.story.js,**/*.spec.js"
   },
   "version": "independent",
   "main": "index.js",

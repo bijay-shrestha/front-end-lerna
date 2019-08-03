@@ -7,9 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "@cogent/c-button": "0.0.0",
-    "@cogent/c-dropdown": "0.0.0",
-    "@cogent/c-inputgroup": "0.0.0",
-    "@cogent/ui-elements": "0.0.0",
     "camelcase": "^5.2.0",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
