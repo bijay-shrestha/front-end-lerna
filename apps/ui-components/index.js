@@ -1,0 +1,1 @@
+export {default as CBreadcrumb} from './src/CBreadcrumb';
