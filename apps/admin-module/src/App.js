@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CButton, CDropdown, CInputGroup} from '@cogent/ui-elements';
+import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
 
 function App() {
@@ -15,9 +15,10 @@ function App() {
                 <CButton id="save" name="Kaushal" />
                 <CDropdown/>
                 <CInputGroup
-                    prepend={[<InputGroup.Text id="basic-addon1">@</InputGroup.Text>]}
-                    append={[<InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>]}
+                    prepend={[<InputGroup.Text key="basic-addon1" id="basic-addon1">@</InputGroup.Text>]}
+                    append={[<InputGroup.Text key="basic-addon2" id="basic-addon2">@example.com</InputGroup.Text>]}
                 />
+                <CToggle onlabel="On" offlabel="Off"></CToggle>
             </header>
         </div>
     );
