@@ -11,7 +11,7 @@ function App() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
-                <CButton name="Kaushal" />
+                <CButton id="save" name="Kaushal" />
                 <CDropdown/>
                 <CInputGroup as="text"/>
             </header>

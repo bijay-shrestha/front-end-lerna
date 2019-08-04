@@ -1,0 +1,7 @@
+{
+  "name": "@cogent/c-toggle",
+  "version": "0.0.0",
+  "main": "CToggle.js",
+  "main:src": "CToggle.js",
+  "license": "MIT"
+}
