@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
+import {CBreadcrumb} from "@cogent/ui-components";
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
     return (
@@ -18,7 +20,12 @@ function App() {
                     prepend={[<InputGroup.Text key="basic-addon1" id="basic-addon1">@</InputGroup.Text>]}
                     append={[<InputGroup.Text key="basic-addon2" id="basic-addon2">@example.com</InputGroup.Text>]}
                 />
-                <CToggle onlabel="On" offlabel="Off"></CToggle>
+                <HashRouter>
+                    <Switch>
+                        <Route exact path="/home" component={<CBreadcrumb/>}>
+                        </Route>
+                    </Switch>
+                </HashRouter>
             </header>
         </div>
     );

@@ -1,1 +1,5 @@
-export {default as CBreadcrumb} from './src/CBreadcrumb';
+import CBreadcrumb from './src/CBreadcrumb';
+
+export {
+    CBreadcrumb
+}
