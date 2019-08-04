@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup} from '@cogent/ui-elements';
+import InputGroup from "react-bootstrap/InputGroup";
 
 function App() {
     return (
@@ -13,7 +14,10 @@ function App() {
                 </p>
                 <CButton id="save" name="Kaushal" />
                 <CDropdown/>
-                <CInputGroup as="text"/>
+                <CInputGroup
+                    prepend={[<InputGroup.Text id="basic-addon1">@</InputGroup.Text>]}
+                    append={[<InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>]}
+                />
             </header>
         </div>
     );
