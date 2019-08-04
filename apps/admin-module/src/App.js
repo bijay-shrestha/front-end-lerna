@@ -26,6 +26,7 @@ function App() {
                         </Route>
                     </Switch>
                 </HashRouter>
+                <CToggle onlabel="On" offlabel="Off"/>
             </header>
         </div>
     );
