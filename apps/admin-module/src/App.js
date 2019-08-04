@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CButton from '@cogent/c-button';
+import {CButton, CDropdown, CInputGroup} from '@cogent/ui-elements';
 
 function App() {
     return (
@@ -11,7 +11,9 @@ function App() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
-                <CButton>Bijay</CButton>
+                <CButton name="Kaushal" />
+                <CDropdown/>
+                <CInputGroup as="text"/>
             </header>
         </div>
     );

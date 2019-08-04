@@ -1,6 +1,0 @@
-{
-    "name": "@cogent/c-inputgroup",
-    "main":"CInputGroup.js",
-    "module": "CInputGroup.js",
-    "version": "0.0.0"
-}

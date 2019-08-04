@@ -1,0 +1,8 @@
+{
+    "name": "@cogent/c-inputgroup",
+    "main": "lib/CInputGroup.js",
+    "main:src": "CInputGroup.js",
+    "module": "CInputGroup.js",
+    "version": "0.0.0",
+    "license": "MIT"
+}

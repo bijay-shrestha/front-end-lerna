@@ -1,0 +1,8 @@
+{
+    "name": "@cogent/c-button",
+    "version": "0.0.0",
+    "main": "CButton.js",
+    "main:src": "CButton.js",
+    "module": "CButton.js",
+    "license": "MIT"
+}

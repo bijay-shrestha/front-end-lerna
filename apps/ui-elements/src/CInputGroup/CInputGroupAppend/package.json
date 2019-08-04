@@ -1,0 +1,8 @@
+{
+    "name": "@cogent/c-inputgroup-append",
+    "main": "lib/CInputGroupAppend.js",
+    "main:src": "CInputGroupAppend.js",
+    "module": "CInputGroupAppend.js",
+    "version": "0.0.0",
+    "license": "MIT"
+}

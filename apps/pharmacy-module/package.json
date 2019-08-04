@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

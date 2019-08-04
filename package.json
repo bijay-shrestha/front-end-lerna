@@ -4,6 +4,9 @@
   "workspaces": [
     "apps/**"
   ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "0.0.0",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -53,7 +56,6 @@
     "release": "lerna publish",
     "bootstrap": "lerna bootstrap --use-workspaces"
   },
-  "version": "independent",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {}
