@@ -1,5 +1,5 @@
 import React from "react";
-import CBreadcrumb from '../CBreadcrumb';
+import CBreadcrumb from '..';
 
 expect.addSnapshotSerializer(enzymeSerializer);
 

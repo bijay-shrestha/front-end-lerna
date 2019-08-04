@@ -4,6 +4,12 @@
   "workspaces": [
     "apps/**"
   ],
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -18,6 +24,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "chalk": "^2.4.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -27,7 +34,7 @@
     "jest-haste-map": "^24.8.1",
     "jest-resolve": "^24.8.0",
     "jest-styled-components": "^6.3.3",
-    "lerna": "^3.15.0",
+    "jest-environment-jsdom-fourteen": "0.1.0",
     "pretty-format": "^24.8.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -37,15 +44,17 @@
     "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3",
     "styled-components": "^4.3.2",
-    "webpack": "^4.38.0"
+    "webpack": "^4.38.0",
+    "lerna": "^3.15.0"
   },
   "author": "Bijay Shrestha",
   "scripts": {
-    "build": "lerna exec --parallel -- babel --root-mode upward ./ -d lib --ignore **/*.story.js,**/*.spec.js",
+    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "compile": "lerna run compile",
     "clean": "lerna exec -- rimraf lib && lerna clean --yes && rimraf node_modules",
-    "clean:build": "lerna exec -- rimraf lib && lerna clean --yes && rimraf node_modules && yarn",
+    "clean:build": "lerna exec -- rimraf lib && lerna clean --yes && rimraf node_modules && react-scripts start",
     "admin": "cd apps/admin-module && yarn start",
+    "a:admin": "cd apps/admin && yarn start",
     "pharmacy": "cd apps/pharmacy-module && yarn start",
     "dev": "start-storybook -p 5555",
     "coverage": "jest --coverage",
@@ -53,9 +62,5 @@
     "release": "lerna publish",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "transpile": "lerna exec --parallel -- babel --root-mode upward ./ -d lib --ignore **/*.story.js,**/*.spec.js"
-  },
-  "version": "independent",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {}
+  }
 }
