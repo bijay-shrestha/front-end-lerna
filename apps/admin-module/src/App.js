@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
+import {CBreadcrumb} from "@cogent/ui-components";
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
     return (
@@ -18,6 +20,12 @@ function App() {
                     prepend={[<InputGroup.Text id="basic-addon1">@</InputGroup.Text>]}
                     append={[<InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>]}
                 />
+                <HashRouter>
+                    <Switch>
+                        <Route exact path="/home" component={<CBreadcrumb/>}>
+                        </Route>
+                    </Switch>
+                </HashRouter>
             </header>
         </div>
     );

@@ -45,10 +45,10 @@
   },
   "author": "Bijay Shrestha",
   "scripts": {
+    "clean:lib": "lerna exec -- rimraf lib ",
     "build": "lerna exec --parallel -- babel --root-mode upward ./ -d lib --ignore **/*.story.js,**/*.spec.js",
     "compile": "lerna run compile",
     "clean": "lerna exec -- rimraf lib && lerna clean --yes && rimraf node_modules",
-    "clean:build": "lerna exec -- rimraf lib && lerna clean --yes && rimraf node_modules && yarn",
     "admin": "cd apps/admin-module && yarn start",
     "pharmacy": "cd apps/pharmacy-module && yarn start",
     "dev": "start-storybook -p 5555",
