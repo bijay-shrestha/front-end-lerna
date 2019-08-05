@@ -4,4 +4,4 @@ import {storiesOf} from "@storybook/react";
 import CToggle from './CToggle';
 
 storiesOf('CToggle', module)
-    .add('default', () => <CToggle onlabel="On" offlabel="Off"/>);
+    .add('default', () => <CToggle onLabel="On" offLabel="Off"/>);

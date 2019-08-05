@@ -1,6 +1,6 @@
 {
     "name": "@cogent/c-inputgroup-prepend",
-    "main": "lib/CInputGroupPrepend.js",
+    "main": "CInputGroupPrepend.js",
     "main:src": "CInputGroupPrepend.js",
     "module": "CInputGroupPrepend.js",
     "version": "0.0.0",

@@ -1,4 +1,4 @@
-import CInputGroup from '../CInputGroup'
+import CInputGroup from '../CInputGroup';
 import { InputGroup, Button } from 'react-bootstrap';
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('InputGroup Test', () => {
