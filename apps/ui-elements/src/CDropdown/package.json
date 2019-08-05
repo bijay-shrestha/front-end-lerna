@@ -2,6 +2,5 @@
   "name": "@cogent/c-dropdown",
   "version": "0.0.0",
   "main": "CDropdown.js",
-  "main:src": "CDropdown.js",
   "license": "MIT"
 }

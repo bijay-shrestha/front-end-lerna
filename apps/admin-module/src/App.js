@@ -3,6 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
+import {CBreadcrumb} from "@cogent/ui-components";
+import {HashRouter} from "react-router-dom";
+
+const dataForBreadCrumb = [
+    {
+        id: '1',
+        name: 'Home',
+        path: '/home'
+    },
+    {
+        id: '2',
+        name: 'General Setup',
+        path: '/generalSetup'
+    }];
 
 function App() {
     return (
@@ -31,6 +45,9 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
+                <HashRouter>
+                    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
+                </HashRouter>
             </header>
         </div>
     );

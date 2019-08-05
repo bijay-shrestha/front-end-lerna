@@ -1,14 +1,13 @@
 {
   "name": "@cogent/admin-module",
   "version": "0.0.0",
-  "main": "lib/index.js",
-  "main:src": "src/index.js",
+  "main": "src/index.js",
   "module": "src/index.js",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@cogent/ui-elements": "0.0.0",
     "@cogent/ui-components": "0.0.0",
+    "@cogent/ui-elements": "0.0.0",
     "camelcase": "^5.2.0",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
@@ -33,8 +32,7 @@
     "style-loader": "0.23.1",
     "styled-components": "^4.3.2",
     "ts-pnp": "1.1.2",
-    "url-loader": "1.1.2",
-    "@react-workspaces/react-scripts": "3.0.1-alpha-07"
+    "url-loader": "1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
