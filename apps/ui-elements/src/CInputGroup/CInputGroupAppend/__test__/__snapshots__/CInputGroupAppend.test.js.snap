@@ -4,15 +4,15 @@ exports[`CInputGroupAppend Snapshot testing should match the previous snapshot 1
 <Memo(CInputGroupAppend)
   append=""
   classes="hello"
-  id="appendinputGroup"
+  id="appendInputGroup"
 >
   <InputGroupAppend
     className="hello"
-    id="appendinputGroup"
+    id="appendInputGroup"
   >
     <div
       className="hello input-group-append"
-      id="appendinputGroup"
+      id="appendInputGroup"
     />
   </InputGroupAppend>
 </Memo(CInputGroupAppend)>

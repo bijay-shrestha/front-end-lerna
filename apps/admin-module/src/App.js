@@ -15,8 +15,16 @@ function App() {
                 <CButton id="save" name="Kaushal"/>
                 <CDropdown/>
                 <CInputGroup
-                    prepend={[<InputGroup.Text key="basic-addon1" id="basic-addon1">@</InputGroup.Text>]}
-                    append={[<InputGroup.Text key="basic-addon2" id="basic-addon2">@example.com</InputGroup.Text>]}
+                    prepend={
+                        [<InputGroup.Text key="basic-addOn1" id="basic-addOn1">
+                            Mr.
+                        </InputGroup.Text>]
+                    }
+                    append={
+                        [<InputGroup.Text key="basic-addOn2" id="basic-addOn2">
+                            @example.com
+                        </InputGroup.Text>]
+                    }
                 />
                 <CToggle onLabel="On"
                          offLabel="Off"
