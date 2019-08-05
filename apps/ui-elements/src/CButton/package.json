@@ -2,5 +2,6 @@
     "name": "@cogent/c-button",
     "version": "0.0.0",
     "main": "CButton.js",
-    "license": "MIT"
+    "license": "MIT",
+    "private": true
 }
