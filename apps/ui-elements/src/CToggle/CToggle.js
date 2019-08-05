@@ -2,7 +2,7 @@ import React, {memo} from 'react';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import PropTypes from 'prop-types';
 
-const CToggle = (props) => {
+const CToggle = props => {
     const {
         id, onLabel, offLabel,
         size, onStyle, offStyle,
@@ -37,7 +37,8 @@ export default memo(CToggle);
 CToggle.defaultProps = {
     id: "c-toggle",
     name: "c-toggle",
-    onChangeHandler: () => {},
+    onChangeHandler: () => {
+    },
     checked: false,
 }
 
