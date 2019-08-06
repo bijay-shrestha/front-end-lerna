@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CTabs Tests Snapshot Test if renders CTab correctly 1`] = `
+<ForwardRef
+  activeKey="/"
+  onSelect={[Function]}
+>
+  <Tab
+    eventKey="/generalSetup/adminSetup/add"
+    id="tab1"
+    key="tab1"
+    title="Add"
+  >
+    <AddPage />
+  </Tab>
+  <Tab
+    eventKey="/generalSetup/adminSetup/manage"
+    id="tab2"
+    key="tab2"
+    title="Manage"
+  >
+    <ManagePage />
+  </Tab>
+</ForwardRef>
+`;
