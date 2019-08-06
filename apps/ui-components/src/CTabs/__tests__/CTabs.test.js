@@ -10,18 +10,16 @@ describe('CTabs Tests', () => {
         {
             id: "1",
             name: "Add",
-            icon: "",
-            content: "",
-            path: "/generalSetup/adminSetup/add",
-            actionKey: '/add'
+            icon: "fa fa-plus-circle",
+            component: "",
+            eventKey: "/generalSetup/adminSetup/add",
         },
         {
             id: "2",
             name: "Manage",
-            icon: "",
-            content: "",
-            path: "/generalSetup/adminSetup/manage",
-            actionKey: '/manage'
+            icon: "fa fa-clipboard",
+            component: "",
+            eventKey: "/generalSetup/adminSetup/manage",
         }
     ];
 

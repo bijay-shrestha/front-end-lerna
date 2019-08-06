@@ -41,16 +41,18 @@ class CTabs extends PureComponent {
 
     }
 
-    getTabElements = tab => (
-        <Tab
+    getTabElements = (tab) => {
+        let title = <> <i className={tab.icon} aria-hidden="true"></i> {tab.name}</>;
+
+        return (<Tab
             id={"tab_" + tab.id}
             key={"tab_" + tab.id}
-            title={tab.name}
-            eventKey={tab.path}
+            title={title}
+            eventKey={tab.eventKey}
         >
-            {tab.content}
-        </Tab>
-    );
+            {tab.component}
+        </Tab>)
+    };
 
     render() {
         const
@@ -87,15 +89,12 @@ CTabs.defaultProps = {
 
 React.propTypes = {
     data: Proptypes.array.isRequired,
-    id: Proptypes.string,
-    activeKey: Proptypes.string,
+    id: Proptypes.string, // HTML id attribute E.g:// id="controlled-tab-example" or "uncontrolled-tab-example"
+    // or "noanim-tab-example" or "left-tabs-example"
     mountOnEnter: Proptypes.bool,
-    onSelect: Proptypes.func.isRequired,
     transition: Proptypes.bool,
     unmountOnExit: Proptypes.bool,
     variant: Proptypes.string, // variant = tabs or pills
-    title: Proptypes.string.isRequired,
-    eventKey: Proptypes.string.isRequired
 };
 
 export default withRouter(CTabs);

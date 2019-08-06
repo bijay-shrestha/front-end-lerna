@@ -10,23 +10,23 @@ storiesOf('CTabs', module)
             {
                 id: "1",
                 name: "Add",
-                icon: "",
-                content: '',
-                path: "/generalSetup/adminSetup/add"
+                icon: "fa fa-plus-circle",
+                component: '',
+                eventKey: "/generalSetup/adminSetup/add"
             },
             {
                 id: "2",
                 name: "Manage",
-                icon: "",
-                content: '',
-                path: "/generalSetup/adminSetup/manage"
+                icon: "fa fa-clipboard",
+                component: '',
+                eventKey: "/generalSetup/adminSetup/manage"
             },
             {
                 id: "3",
                 name: "Contact",
-                icon: "",
-                content: '',
-                path: "/generalSetup/adminSetup/contact"
+                icon: "fa fa-phone",
+                component: '',
+                eventKey: "/generalSetup/adminSetup/contact"
             }];
         return (
             <HashRouter>
