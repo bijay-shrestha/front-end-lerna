@@ -33,16 +33,12 @@ class CBreadcrumb extends PureComponent {
         // IF ROUTE IS NOT 'home' ADD 'home' AS FIRST PATH
         pathsToInclude[0] !== "home" && pathsToInclude.unshift("home");
 
-        // REMOVE THE END PATHNAME
-        pathsToInclude.splice(pathsToInclude.length - 1, 1);
-
         //INCLUDE '/' IN EACH PATHNAME
         for (let i = 0; i < pathsToInclude.length; i++) {
-            pathsToInclude[i] = "/".concat(pathsToInclude[i]);
-        }
+            i === 0 || i === 1 ? pathsToInclude[i] = "/".concat(pathsToInclude[i])
+                : pathsToInclude[i] = pathsToInclude[i - 1] + "/".concat(pathsToInclude[i])
 
-        //FINALLY INCLUDE THE FULL PATH TO CURRENT PAGE
-        pathsToInclude.push(currentLocation);
+        }
 
         return pathsToInclude;
     };
