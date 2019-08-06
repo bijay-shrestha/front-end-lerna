@@ -7,19 +7,15 @@ exports[`CTabs Tests Snapshot Test if renders CTab correctly 1`] = `
 >
   <Tab
     eventKey="/generalSetup/adminSetup/add"
-    id="tab1"
-    key="tab1"
+    id="tab_1"
+    key="tab_1"
     title="Add"
-  >
-    <AddPage />
-  </Tab>
+  />
   <Tab
     eventKey="/generalSetup/adminSetup/manage"
-    id="tab2"
-    key="tab2"
+    id="tab_2"
+    key="tab_2"
     title="Manage"
-  >
-    <ManagePage />
-  </Tab>
+  />
 </ForwardRef>
 `;

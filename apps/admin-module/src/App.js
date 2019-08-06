@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
-import {CBreadcrumb} from "@cogent/ui-components";
+import {CBreadcrumb, CTabs} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 
 const dataForBreadCrumb = [
@@ -16,6 +16,29 @@ const dataForBreadCrumb = [
         id: '2',
         name: 'General Setup',
         path: '/generalSetup'
+    }];
+
+const tabData = [
+    {
+        id: "1",
+        name: "Add",
+        icon: "",
+        content: '',
+        path: "/generalSetup/adminSetup/add"
+    },
+    {
+        id: "2",
+        name: "Manage",
+        icon: "",
+        content: '',
+        path: "/generalSetup/adminSetup/manage"
+    },
+    {
+        id: "3",
+        name: "Contact",
+        icon: "",
+        content: '',
+        path: "/generalSetup/adminSetup/contact"
     }];
 
 function App() {
@@ -47,7 +70,9 @@ function App() {
                          }}/>
                 <HashRouter>
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
+                    <CTabs data={tabData} mountOnEnter={true}/>
                 </HashRouter>
+
             </header>
         </div>
     );

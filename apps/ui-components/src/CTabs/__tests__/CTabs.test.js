@@ -1,8 +1,6 @@
 import CTabs from '../CTabs';
 import Tabs from "react-bootstrap/Tabs";
 import React from "react";
-import {AddPage} from "../../AdminSetupPage/AddPage";
-import {ManagePage} from "../../AdminSetupPage/ManagePage";
 
 expect.addSnapshotSerializer(enzymeSerializer);
 
@@ -13,7 +11,7 @@ describe('CTabs Tests', () => {
             id: "1",
             name: "Add",
             icon: "",
-            content: <AddPage/>,
+            content: "",
             path: "/generalSetup/adminSetup/add",
             actionKey: '/add'
         },
@@ -21,7 +19,7 @@ describe('CTabs Tests', () => {
             id: "2",
             name: "Manage",
             icon: "",
-            content: <ManagePage/>,
+            content: "",
             path: "/generalSetup/adminSetup/manage",
             actionKey: '/manage'
         }
@@ -150,7 +148,7 @@ describe('CTabs Tests', () => {
                 'eventKey'
             ];
 
-            let propsAvailable = Object.keys(wrapper.find('#tab1').props());
+            let propsAvailable = Object.keys(wrapper.find('#tab_1').props());
             propsRequired.forEach((propsReq, i) => (
                 expect(propsReq).toContain(propsAvailable[i])
             ));

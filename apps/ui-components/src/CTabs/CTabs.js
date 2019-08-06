@@ -10,13 +10,14 @@ class CTabs extends PureComponent {
         activeTabKey: ''
     };
 
+
     setActiveTabKey = value => this.setState({activeTabKey: value});
 
     getCurrentUrlAndSetActiveTab = () => {
         this.setActiveTabKey(this.props.location.pathname);
     };
 
-    handleTabSelect = async (path) => {
+    handleTabSelect = async path => {
         await this.setActiveTabKey(path);
         this.props.history.push(path);
     };
@@ -25,7 +26,7 @@ class CTabs extends PureComponent {
         this.getCurrentUrlAndSetActiveTab();
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps, prevState) {
         if (prevProps.history) {
             const newPath = prevProps.history.location.pathname;
             const oldPath = prevProps.location.pathname;
@@ -40,10 +41,10 @@ class CTabs extends PureComponent {
 
     }
 
-    getTabElements = (tab) => (
+    getTabElements = tab => (
         <Tab
-            id={"tab" + tab.id}
-            key={"tab" + tab.id}
+            id={"tab_" + tab.id}
+            key={"tab_" + tab.id}
             title={tab.name}
             eventKey={tab.path}
         >
@@ -52,7 +53,16 @@ class CTabs extends PureComponent {
     );
 
     render() {
-        const {id, mountOnEnter, transition, unmountOnExit, variant, data} = this.props;
+        const
+            {
+                id,
+                mountOnEnter,
+                transition,
+                unmountOnExit,
+                variant,
+                data
+            } = this.props;
+
         return (
             <Tabs
                 id={id}
@@ -81,9 +91,9 @@ React.propTypes = {
     activeKey: Proptypes.string,
     mountOnEnter: Proptypes.bool,
     onSelect: Proptypes.func.isRequired,
-    transition: Proptypes.object,
+    transition: Proptypes.bool,
     unmountOnExit: Proptypes.bool,
-    variant: Proptypes.string,
+    variant: Proptypes.string, // variant = tabs or pills
     title: Proptypes.string.isRequired,
     eventKey: Proptypes.string.isRequired
 };
