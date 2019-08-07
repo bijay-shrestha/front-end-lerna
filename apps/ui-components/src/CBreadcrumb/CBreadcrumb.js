@@ -98,7 +98,8 @@ class CBreadcrumb extends PureComponent {
     }
 
     createBreadcrumbLink = (breadcrumb, index) =>
-        index !== this.state.routes.length - 1 ?
+        index !== this.state.routes.length - 1 &&
+        breadcrumb.isLink ?
             {'href': "#".concat(breadcrumb.path)} : {'active': true};
 
     getBreadcrumbItemProps = (breadcrumb, index) => {

@@ -10,27 +10,39 @@ const dataForBreadCrumb = [
     {
         id: '1',
         name: 'Home',
-        path: '/home'
+        icon: "",
+        path: '/home',
+        isLink: true
     },
     {
         id: '2',
         name: 'General Setup',
-        path: '/generalSetup'
+        icon: "",
+        path: '/generalSetup',
+        isLink: false
     },
     {
         id: "3",
         name: "Add",
         icon: "",
-        content: '',
-        path: "/generalSetup/adminSetup/add"
+        path: "/generalSetup/adminSetup/add",
+        isLink: true
     },
     {
         id: "4",
         name: "AdminSetup",
         icon: "",
-        content: '',
-        path: "/generalSetup/adminSetup"
-    }];
+        path: "/generalSetup/adminSetup",
+        isLink: false
+    },
+    {
+        id: "5",
+        name: "Form",
+        icon: "",
+        path: "/generalSetup/adminSetup/add/form",
+        isLink: true
+    },
+];
 
 const tabData = [
     {
@@ -82,10 +94,10 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
-                {/*<HashRouter>*/}
-                {/*    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>*/}
-                {/*    <CTabs data={tabData}/>*/}
-                {/*</HashRouter>*/}
+                <HashRouter>
+                    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
+                    <CTabs data={tabData}/>
+                </HashRouter>
 
             </header>
         </div>
