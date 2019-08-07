@@ -3,6 +3,7 @@ import Proptypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
+import {TryCatchHandler} from "../../../common-utils";
 
 class CTabs extends PureComponent {
 
@@ -73,7 +74,7 @@ class CTabs extends PureComponent {
                 transition={transition}
                 unmountOnExit={unmountOnExit}
                 variant={variant}
-                onSelect={path => this.handleTabSelect(path)}
+                onSelect={path => TryCatchHandler.genericTryCatch(this.handleTabSelect(path))}
             >
                 {data.map(tab =>
                     this.getTabElements(tab)

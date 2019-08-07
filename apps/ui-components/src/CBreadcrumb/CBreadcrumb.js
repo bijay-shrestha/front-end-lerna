@@ -2,12 +2,14 @@ import React, {PureComponent} from 'react';
 import Proptypes from 'prop-types';
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import {withRouter} from 'react-router-dom';
+import {TryCatchHandler} from "../../../common-utils";
 
 class CBreadcrumb extends PureComponent {
     state = {
         routes: [],
         currentLocation: ""
     };
+
     setCurrentLocation = path => {
         this.setState({currentLocation: path});
     };
@@ -71,7 +73,7 @@ class CBreadcrumb extends PureComponent {
     };
 
     componentDidMount() {
-        this.setCurrentLocationAndFilterRoutes();
+        TryCatchHandler.genericTryCatch(this.setCurrentLocationAndFilterRoutes());
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -86,7 +88,7 @@ class CBreadcrumb extends PureComponent {
             const newPath = prevProps.history.location.pathname;
             const oldPath = prevProps.location.pathname;
             if (newPath !== oldPath) {
-                this.setCurrentLocationAndFilterRoutes(newPath)
+                TryCatchHandler.genericTryCatch(this.setCurrentLocationAndFilterRoutes(newPath));
             } else {
                 return false
             }

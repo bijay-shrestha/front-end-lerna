@@ -60,7 +60,7 @@ describe('CBreadcrumb component tests', () => {
             setWrapperProps(wrapper, {breadcrumbData: dataForBreadCrumb});
         });
 
-        afterAll(() => {
+        afterEach(() => {
             wrapper.unmount();
         });
 

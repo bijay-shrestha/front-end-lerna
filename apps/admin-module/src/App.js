@@ -16,6 +16,20 @@ const dataForBreadCrumb = [
         id: '2',
         name: 'General Setup',
         path: '/generalSetup'
+    },
+    {
+        id: "3",
+        name: "Add",
+        icon: "",
+        content: '',
+        path: "/generalSetup/adminSetup/add"
+    },
+    {
+        id: "4",
+        name: "AdminSetup",
+        icon: "",
+        content: '',
+        path: "/generalSetup/adminSetup"
     }];
 
 const tabData = [
@@ -68,10 +82,10 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
-                <HashRouter>
-                    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
-                    <CTabs data={tabData} mountOnEnter={true}/>
-                </HashRouter>
+                {/*<HashRouter>*/}
+                {/*    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>*/}
+                {/*    <CTabs data={tabData}/>*/}
+                {/*</HashRouter>*/}
 
             </header>
         </div>

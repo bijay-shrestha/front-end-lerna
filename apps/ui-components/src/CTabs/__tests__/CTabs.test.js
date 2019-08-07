@@ -65,7 +65,7 @@ describe('CTabs Tests', () => {
             }
         );
 
-        afterEach(() => {
+        afterAll(() => {
             wrapper.unmount();
         });
 
