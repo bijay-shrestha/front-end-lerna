@@ -143,8 +143,7 @@ class CBreadcrumb extends PureComponent {
 }
 
 CBreadcrumb.defaultProps = {
-    location: {pathname: '/'},
-    history: {location: {pathname: '/'}}
+    location: {pathname: '/'}
 };
 
 React.propTypes = {

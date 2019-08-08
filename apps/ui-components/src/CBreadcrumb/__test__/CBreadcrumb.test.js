@@ -25,7 +25,7 @@ describe('CBreadcrumb component tests', () => {
             path: '/generalSetup/adminSetup',
             isLink: true
         }
-        ];
+    ];
 
     let setWrapperProps = (cWrapper, propsObject) => {
         cWrapper.setProps(propsObject);
