@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import Proptypes from 'prop-types';
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import {withRouter} from 'react-router-dom';
-import {TryCatchHandler} from "../../../common-utils";
+import {TryCatchHandler, ConditionCheckUtils} from "../../../common-utils";
 
 class CBreadcrumb extends PureComponent {
     state = {
@@ -141,6 +141,11 @@ class CBreadcrumb extends PureComponent {
             </Breadcrumb>);
     }
 }
+
+CBreadcrumb.defaultProps = {
+    location: {pathname: '/'},
+    history: {location: {pathname: '/'}}
+};
 
 React.propTypes = {
     breadcrumbData: Proptypes.array.isRequired,
