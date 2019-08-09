@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
+import {CButton, CDropdown, CInputGroup, CToggle, CCheckbox} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
 import {CBreadcrumb} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
@@ -45,6 +45,8 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
+                {/*<CCheckbox id="checkbox" label="Sabu" onChangeHandler={(e) => console.log(e)}/>*/}
+                <CCheckbox id="checkbox" label="Sabu"/>
                 <HashRouter>
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
                 </HashRouter>
