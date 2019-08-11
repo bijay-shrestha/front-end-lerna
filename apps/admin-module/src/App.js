@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InputGroup from "react-bootstrap/InputGroup";
-import {CButton, CDropdown, CInputGroup,
-    CToggle, CCheckbox, CBreadcrumb, CTabs,CModal} from "@cogent/ui-components";
+import {
+    CButton, CDropdown, CInputGroup,
+    CToggle, CCheckbox, CBreadcrumb, CTabs, CModal
+} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -83,7 +85,9 @@ function App() {
                         modalHeading="Modal Smriti"
                         size="md"
                         bodyChildren={body}
-                        footerChildren={footerButton}/>
+                        footerChildren={footerButton}
+                        onHide={() => {
+                        }}/>
 
                 <CDropdown/>
                 <CInputGroup
