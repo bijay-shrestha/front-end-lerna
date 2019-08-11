@@ -24,17 +24,17 @@ const dataForBreadCrumb = [
     },
     {
         id: "3",
-        name: "Add",
+        name: "AdminSetup",
         icon: "",
-        path: "/generalSetup/adminSetup/add",
+        path: "/generalSetup/adminSetup",
         isLink: true
     },
     {
         id: "4",
-        name: "AdminSetup",
+        name: "Add",
         icon: "",
-        path: "/generalSetup/adminSetup",
-        isLink: false
+        path: "/generalSetup/adminSetup/add",
+        isLink: true
     },
     {
         id: "5",
