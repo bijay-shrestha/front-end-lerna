@@ -9,7 +9,7 @@ describe('CCheckbox Tests', () => {
         sWrapper = shallow(<CCheckbox
             id="checkbox_1"
             label="checkItBaby"
-            onCheckHandler={mockFunction}/>);
+            onChange={mockFunction}/>);
     });
 
     test('if CCheckbox is defined', () => {

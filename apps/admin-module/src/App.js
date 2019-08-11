@@ -47,7 +47,7 @@ function App() {
                          }}/>
                 <CCheckbox id="checkbox"
                            label="Sabu"
-                           onCheckHandler={(e) => console.log(e)}
+                           onChange={(e) => console.log(e)}
                            title="Shakya"
                            inline={true}
                            custom={true}

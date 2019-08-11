@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import Form from 'react-bootstrap/Form';
 import PropTypes from 'prop-types';
 
@@ -16,13 +16,13 @@ const CCheckbox = props => {
         isValid,
         title,
         bsPrefix,
-        onCheckHandler
+        onChange
     } = props;
 
     return (
         <Form.Check
             test-id="c-checkbox"
-            id={id}
+            id={label.concat('_').concat(id)}
             label={label}
             type='checkbox'
             _ref={ref}
@@ -35,26 +35,25 @@ const CCheckbox = props => {
             isValid={isValid}
             title={title}
             bsPrefix={bsPrefix}
-            onChange={onCheckHandler}
+            onChange={onChange}
         />
     );
 };
 
 CCheckbox.defaultProps = {
     type: 'checkbox',
-    onCheckHandler: () => {
-    }
+    onChange: () => {}
 };
 
 CCheckbox.propTypes = {
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired || PropTypes.node, // checkbox's display string
+    id: PropTypes.string.isRequired, // must be unique
+    label: PropTypes.string.isRequired || PropTypes.node,
     _ref: PropTypes.oneOfType([
         PropTypes.func, // for legacy refs
         PropTypes.shape({current: PropTypes.instanceOf(Element)})
     ]),
     children: PropTypes.node,
-    custom: PropTypes.bool, // Use Bootstrap's custom form elements to replace the browser defaults
+    custom: PropTypes.bool, // use Bootstrap's custom form elements to replace the browser defaults
     disabled: PropTypes.bool, // to manually disable or enable the checkbox
     feedback: PropTypes.node, // message to display when the input is in a validation state
     inline: PropTypes.bool, // add class 'form-check-inline' to bring checkboxes on the same horizontal line
@@ -65,7 +64,7 @@ CCheckbox.propTypes = {
     // CSS base class name and modifier class names prefix.
     // This is an escape hatch for working with heavily
     // customized bootstrap css.
-    onChange: PropTypes.func
+    onChange: PropTypes.func.isRequired
 };
 
-export default CCheckbox;
+export default memo(CCheckbox);

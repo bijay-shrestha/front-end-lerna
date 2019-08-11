@@ -59,7 +59,7 @@
     "pharmacy": "cd apps/pharmacy-module && yarn start",
     "dev": "start-storybook -p 5555",
     "coverage": "jest --coverage",
-    "unit": "jest --verbose --watch",
+    "unit": "jest --watch --verbose",
     "release": "lerna publish",
     "bootstrap": "lerna bootstrap --use-workspaces"
   },

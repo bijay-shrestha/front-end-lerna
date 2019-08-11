@@ -3,7 +3,7 @@
 exports[`CCheckbox Tests Snapshot Testing should match snapshot 1`] = `
 <FormCheck
   disabled={false}
-  id="checkbox_1"
+  id="checkItBaby_checkbox_1"
   inline={false}
   isInvalid={false}
   isValid={false}
