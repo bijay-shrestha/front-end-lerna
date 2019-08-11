@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CDropdown, CInputGroup, CToggle, CCheckbox} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
-import {CBreadcrumb, CTabs} from "@cogent/ui-components";
+import {CBreadcrumb, CModal, CTabs} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -69,6 +69,8 @@ const tabData = [
     }];
 
 function App() {
+    let footerButton = <CButton id="sabu" name="Sabu"/>;
+    let body = <CButton id="sauravi" name="sauravi"/>;
     return (
         <div className="App">
             <header className="App-header">
@@ -77,6 +79,12 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <CButton id="save" name="Kaushal"/>
+                <CModal show={true}
+                        modalHeading="Modal Smriti"
+                        size="md"
+                        bodyChildren={body}
+                        footerChildren={footerButton}/>
+
                 <CDropdown/>
                 <CInputGroup
                     prepend={
