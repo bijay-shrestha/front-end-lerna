@@ -57,7 +57,7 @@ CCheckbox.propTypes = {
     custom: PropTypes.bool, // Use Bootstrap's custom form elements to replace the browser defaults
     disabled: PropTypes.bool, // to manually disable or enable the checkbox
     feedback: PropTypes.node, // message to display when the input is in a validation state
-    inline: PropTypes.bool, // add class 'form-check-inline' to bring checkbox and label in same line
+    inline: PropTypes.bool, // add class 'form-check-inline' to bring checkboxes on the same horizontal line
     isInvalid: PropTypes.bool, // manually style the input as invalid, shows in red
     isValid: PropTypes.bool, // manually style the input as valid, shows in green
     title: PropTypes.string, // label's title property
