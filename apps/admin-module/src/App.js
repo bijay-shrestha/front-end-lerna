@@ -45,8 +45,17 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
-                {/*<CCheckbox id="checkbox" label="Sabu" onChangeHandler={(e) => console.log(e)}/>*/}
-                <CCheckbox id="checkbox" label="Sabu"/>
+                <CCheckbox id="checkbox"
+                           label="Sabu"
+                           onCheckHandler={(e) => console.log(e)}
+                           title="Shakya"
+                           inline={true}
+                           custom={true}
+                    // feedback="This is feedback"
+                    // isInvalid={true}
+                           isValid={true}
+                           bsPrefix="form-check"
+                />
                 <HashRouter>
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
                 </HashRouter>
