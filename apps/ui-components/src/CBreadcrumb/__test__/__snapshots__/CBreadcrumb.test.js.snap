@@ -20,5 +20,12 @@ exports[`CBreadcrumb component tests Snapshot Testing if renders CBreadcrumb com
   >
     General Setup
   </BreadcrumbItem>
+  <BreadcrumbItem
+    active={true}
+    id="breadcrumbItem3"
+    key="breadcrumb3"
+  >
+    Admin Setup
+  </BreadcrumbItem>
 </Breadcrumb>
 `;

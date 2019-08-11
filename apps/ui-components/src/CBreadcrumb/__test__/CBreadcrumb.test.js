@@ -10,13 +10,22 @@ describe('CBreadcrumb component tests', () => {
         {
             id: '1',
             name: 'Home',
-            path: '/home'
+            path: '/home',
+            isLink: true
         },
         {
             id: '2',
             name: 'General Setup',
-            path: '/generalSetup'
-        }];
+            path: '/generalSetup',
+            isLink: false
+        },
+        {
+            id: '3',
+            name: 'Admin Setup',
+            path: '/generalSetup/adminSetup',
+            isLink: true
+        }
+    ];
 
     let setWrapperProps = (cWrapper, propsObject) => {
         cWrapper.setProps(propsObject);
@@ -60,7 +69,7 @@ describe('CBreadcrumb component tests', () => {
             setWrapperProps(wrapper, {breadcrumbData: dataForBreadCrumb});
         });
 
-        afterAll(() => {
+        afterEach(() => {
             wrapper.unmount();
         });
 
@@ -122,7 +131,7 @@ describe('CBreadcrumb component tests', () => {
             setWrapperProps(wrapper, {
                 breadcrumbData: dataForBreadCrumb,
                 location: {
-                    pathname: '/generalSetup'
+                    pathname: '/generalSetup/adminSetup'
                 },
             });
             await instance.componentDidMount();
@@ -137,7 +146,8 @@ describe('CBreadcrumb component tests', () => {
             expect(wrapper.find('#breadcrumbItem1').text()).not.toBe('');
         });
 
-        test('if  BreadcrumbItem components except last has href with value', () => {
+        test('if  BreadcrumbItem components except last and ' +
+            'with `isLink` flag set to true has href with value', () => {
             expect(wrapper.find('#breadcrumbItem1').prop('href')).not.toBe('');
         });
 
@@ -145,15 +155,24 @@ describe('CBreadcrumb component tests', () => {
             expect(wrapper.find('#breadcrumbItem2').length).toBe(1);
         });
 
-        test('if last BreadcrumbItem component has no href', () => {
+        test('if BreadcrumbItem component with `isLink` set false has no href', () => {
             expect(wrapper.find('#breadcrumbItem2').prop('href')).not.toBeDefined();
         });
 
-        test('if last BreadcrumbItem component has prop active', () => {
+        test('if last BreadcrumbItem component has no href', () => {
+            expect(wrapper.find('#breadcrumbItem3').prop('href')).not.toBeDefined();
+        });
+
+        test('if BreadcrumbItem component with `isLink` set to false has prop active', () => {
             expect(wrapper.find('#breadcrumbItem2').prop('active')).toBeTruthy();
         });
 
-        test('if BreadcrumbItem  component excluding last contains all required props', () => {
+        test('if last BreadcrumbItem component has prop active', () => {
+            expect(wrapper.find('#breadcrumbItem3').prop('active')).toBeTruthy();
+        });
+
+        test('if BreadcrumbItem  component excluding last ' +
+            'and with `isLink` flag set to true contains all required props', () => {
             let propRequired = [
                 'test-id',
                 'as',
@@ -171,7 +190,8 @@ describe('CBreadcrumb component tests', () => {
 
         });
 
-        test('if BreadcrumbItem  component including last contains all required props', () => {
+        test('if BreadcrumbItem  component including last and' +
+            'with `isLink` flag set to false contains all required props', () => {
             let propRequired = [
                 'test-id',
                 'as',

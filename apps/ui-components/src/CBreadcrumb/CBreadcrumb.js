@@ -2,12 +2,14 @@ import React, {PureComponent} from 'react';
 import Proptypes from 'prop-types';
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import {withRouter} from 'react-router-dom';
+import {TryCatchHandler, ConditionCheckUtils} from "../../../common-utils";
 
 class CBreadcrumb extends PureComponent {
     state = {
         routes: [],
         currentLocation: ""
     };
+
     setCurrentLocation = path => {
         this.setState({currentLocation: path});
     };
@@ -33,16 +35,12 @@ class CBreadcrumb extends PureComponent {
         // IF ROUTE IS NOT 'home' ADD 'home' AS FIRST PATH
         pathsToInclude[0] !== "home" && pathsToInclude.unshift("home");
 
-        // REMOVE THE END PATHNAME
-        pathsToInclude.splice(pathsToInclude.length - 1, 1);
-
         //INCLUDE '/' IN EACH PATHNAME
         for (let i = 0; i < pathsToInclude.length; i++) {
-            pathsToInclude[i] = "/".concat(pathsToInclude[i]);
-        }
+            i === 0 || i === 1 ? pathsToInclude[i] = "/".concat(pathsToInclude[i])
+                : pathsToInclude[i] = pathsToInclude[i - 1] + "/".concat(pathsToInclude[i])
 
-        //FINALLY INCLUDE THE FULL PATH TO CURRENT PAGE
-        pathsToInclude.push(currentLocation);
+        }
 
         return pathsToInclude;
     };
@@ -75,7 +73,7 @@ class CBreadcrumb extends PureComponent {
     };
 
     componentDidMount() {
-        this.setCurrentLocationAndFilterRoutes();
+        TryCatchHandler.genericTryCatch(this.setCurrentLocationAndFilterRoutes());
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -90,7 +88,7 @@ class CBreadcrumb extends PureComponent {
             const newPath = prevProps.history.location.pathname;
             const oldPath = prevProps.location.pathname;
             if (newPath !== oldPath) {
-                this.setCurrentLocationAndFilterRoutes(newPath)
+                TryCatchHandler.genericTryCatch(this.setCurrentLocationAndFilterRoutes(newPath));
             } else {
                 return false
             }
@@ -100,7 +98,8 @@ class CBreadcrumb extends PureComponent {
     }
 
     createBreadcrumbLink = (breadcrumb, index) =>
-        index !== this.state.routes.length - 1 ?
+        index !== this.state.routes.length - 1 &&
+        breadcrumb.isLink ?
             {'href': "#".concat(breadcrumb.path)} : {'active': true};
 
     getBreadcrumbItemProps = (breadcrumb, index) => {
@@ -142,6 +141,10 @@ class CBreadcrumb extends PureComponent {
             </Breadcrumb>);
     }
 }
+
+CBreadcrumb.defaultProps = {
+    location: {pathname: '/'}
+};
 
 React.propTypes = {
     breadcrumbData: Proptypes.array.isRequired,
