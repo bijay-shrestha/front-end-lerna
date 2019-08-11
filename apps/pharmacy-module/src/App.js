@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CButton, CToggle} from '@cogent/ui-elements';
+import {CButton, CToggle} from '@cogent/ui-components';
 
 function App() {
     return (
