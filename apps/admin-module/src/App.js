@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CButton, CDropdown, CInputGroup, CToggle} from '@cogent/ui-elements';
+import {CButton, CDropdown, CInputGroup, CToggle, CCheckbox} from '@cogent/ui-elements';
 import InputGroup from "react-bootstrap/InputGroup";
 import {CBreadcrumb, CTabs} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
@@ -95,6 +95,17 @@ function App() {
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
+                <CCheckbox id="checkbox"
+                           label="Sabu"
+                           onChange={(e) => console.log(e)}
+                           title="Shakya"
+                           inline={true}
+                           custom={true}
+                    // feedback="This is feedback"
+                    // isInvalid={true}
+                           isValid={true}
+                           bsPrefix="form-check"
+                />
                 <HashRouter>
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
                     <CTabs data={tabData}/>
