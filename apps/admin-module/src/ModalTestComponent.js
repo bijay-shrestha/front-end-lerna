@@ -12,16 +12,19 @@ class ModalTestComponent extends PureComponent {
     };
 
     render() {
-        let footerButton = <CButton id="sabu" name="Sabu"/>;
-        let body = <> <h1>This is Modal body</h1><CButton id="sauravi" name="sauravi"/></>;
+        let footerChildren = <CButton id="test-button" name="Footer Test button"/>;
+        let body =
+            <>
+                <h1>This is Modal body</h1><CButton id="body-button" name="Body button"/>
+            </>;
         return (
             <>
                 <CButton id="modal" name="Open Modal" onClickHandler={this.setShowModal}/>
                 <CModal show={this.state.showModal}
-                        modalHeading="Modal Smriti"
+                        modalHeading="Test Modal Header"
                         size="md"
                         bodyChildren={body}
-                        footerChildren={footerButton}
+                        footerChildren={footerChildren}
                         onHide={this.setShowModal}
                 />
             </>

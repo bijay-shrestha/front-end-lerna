@@ -4,6 +4,7 @@ exports[`CModal Tests Snapshot Testing should match snapshot 1`] = `
 <Bootstrap(Modal)
   centered={true}
   id="modal"
+  onHide={[Function]}
 >
   <ModalHeader
     closeButton={true}
@@ -13,7 +14,7 @@ exports[`CModal Tests Snapshot Testing should match snapshot 1`] = `
     <ModalTitle
       id="title"
     >
-      Modal test
+      Modal Heading Test
     </ModalTitle>
   </ModalHeader>
   <ModalBody

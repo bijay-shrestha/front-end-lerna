@@ -4,18 +4,30 @@ import PropTypes from 'prop-types';
 
 const CModal = props => {
     const {
-        modalHeading,
         animation,
+        asBody,
+        asTitle,
         autoFocus,
         backdrop,
         backdropClassName,
+        bodyChildren,
+        bsPrefix,
+        bsPrefixBody,
+        bsPrefixFooter,
+        bsPrefixHeader,
+        bsPrefixTitle,
         centered,
+        closeButton,
+        closeLabel,
         container,
         dialogAs,
         dialogClassName,
         enforceFocus,
+        footerAs,
+        footerChildren,
         keyboard,
         manager,
+        modalHeading,
         onEnter,
         onEntered,
         onEntering,
@@ -28,32 +40,21 @@ const CModal = props => {
         restoreFocus,
         scrollable,
         show,
-        size,
-        bsPrefix,
-        closeButton,
-        closeLabel,
-        bsPrefixHeader,
-        asTitle,
-        bsPrefixTitle,
-        asBody,
-        bsPrefixBody,
-        bodyChildren,
-        footerAs,
-        bsPrefixFooter,
-        footerChildren
+        size
     } = props;
     return (
         <Modal
-            id="modal"
             animation={animation}
             autoFocus={autoFocus}
             backdrop={backdrop}
             backdropClassName={backdropClassName}
+            bsPrefix={bsPrefix}
             centered={centered}
             container={container}
             dialogAs={dialogAs}
             dialogClassName={dialogClassName}
             enforceFocus={enforceFocus}
+            id="modal"
             keyboard={keyboard}
             manager={manager}
             onEnter={onEnter}
@@ -68,8 +69,7 @@ const CModal = props => {
             restoreFocus={restoreFocus}
             scrollable={scrollable}
             show={show}
-            size={size}
-            bsPrefix={bsPrefix}>
+            size={size}>
 
             <Modal.Header
                 id="modal-header"
@@ -110,19 +110,29 @@ CModal.defaultProps = {
 };
 
 CModal.propTypes = {
-    id: PropTypes.string,
-    modalHeading: PropTypes.string.isRequired,
     animation: PropTypes.bool,
+    asBody: PropTypes.elementType, // as
+    asTitle: PropTypes.elementType, // as
     autoFocus: PropTypes.bool,
     backdrop: PropTypes.bool || PropTypes.string,
     backdropClassName: PropTypes.string,
+    bsPrefix: PropTypes.string,
+    bsPrefixBody: PropTypes.string,
+    bsPrefixFooter: PropTypes.string,
+    bsPrefixHeader: PropTypes.string,
+    bsPrefixTitle: PropTypes.string,
     centered: PropTypes.bool,
+    closeButton: PropTypes.bool,
+    closeLabel: PropTypes.string,
     container: PropTypes.any,
     dialogAs: PropTypes.elementType,
     dialogClassName: PropTypes.string,
     enforceFocus: PropTypes.bool,
+    footerAs: PropTypes.elementType,
+    id: PropTypes.string,
     keyboard: PropTypes.bool,
     manager: PropTypes.object,
+    modalHeading: PropTypes.string.isRequired,
     onEnter: PropTypes.func,
     onEntered: PropTypes.func,
     onEntering: PropTypes.func,
@@ -136,16 +146,6 @@ CModal.propTypes = {
     scrollable: PropTypes.bool,
     show: PropTypes.bool,
     size: PropTypes.string,//sm lg xl
-    bsPrefix: PropTypes.string,
-    closeButton: PropTypes.bool,
-    closeLabel: PropTypes.string,
-    bsPrefixHeader: PropTypes.string,
-    asTitle: PropTypes.elementType, // as
-    bsPrefixTitle: PropTypes.string,
-    asBody: PropTypes.elementType, // as
-    bsPrefixBody: PropTypes.string,
-    footerAs: PropTypes.elementType,
-    bsPrefixFooter: PropTypes.string
 };
 
 export default CModal;

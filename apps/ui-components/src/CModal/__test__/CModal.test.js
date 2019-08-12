@@ -5,7 +5,7 @@ expect.addSnapshotSerializer(enzymeSerializer);
 describe('CModal Tests', () => {
     let sWrapper;
     beforeEach(() => {
-        sWrapper = shallow(<CModal modalHeading="Modal test"/>);
+        sWrapper = shallow(<CModal modalHeading="Modal Heading Test"/>);
     });
 
     test('if CModal is defined', () => {
@@ -19,16 +19,17 @@ describe('CModal Tests', () => {
 
         test('if Modal has all required props', () => {
             let propRequired = [
-                'id',
                 'animation',
                 'autoFocus',
                 'backdrop',
                 'backdropClassName',
+                'bsPrefix',
                 'centered',
                 'container',
                 'dialogAs',
                 'dialogClassName',
                 'enforceFocus',
+                'id',
                 'keyboard',
                 'manager',
                 'onEnter',
@@ -43,8 +44,7 @@ describe('CModal Tests', () => {
                 'restoreFocus',
                 'scrollable',
                 'show',
-                'size',
-                'bsPrefix'
+                'size'
             ];
 
             let propsForModal = Object.keys(sWrapper.find('#modal').props());
@@ -104,7 +104,6 @@ describe('CModal Tests', () => {
         });
 
         test('if Modal has non empty Heading', () => {
-            console.log(sWrapper.find('#title').text());
             expect(sWrapper.find('#title').text()).not.toBe("");
         });
 
