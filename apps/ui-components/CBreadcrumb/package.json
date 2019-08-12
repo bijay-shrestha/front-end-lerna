@@ -1,8 +1,0 @@
-{
-  "name": "@cogent/c-breadcrumb",
-  "main":"CBreadcrumb.js",
-  "module": "CBreadcrumb.js",
-  "version": "0.0.0",
-  "author": "Sabu Shakya",
-  "license": "COGENT"
-}
