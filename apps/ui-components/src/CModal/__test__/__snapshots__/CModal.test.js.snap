@@ -12,7 +12,9 @@ exports[`CModal Tests Snapshot Testing should match snapshot 1`] = `
   >
     <ModalTitle
       id="title"
-    />
+    >
+      Modal test
+    </ModalTitle>
   </ModalHeader>
   <ModalBody
     id="modal-body"

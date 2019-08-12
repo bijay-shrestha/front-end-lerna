@@ -4,10 +4,11 @@ import './App.css';
 import InputGroup from "react-bootstrap/InputGroup";
 import {
     CButton, CDropdown, CInputGroup,
-    CToggle, CCheckbox, CBreadcrumb, CTabs, CModal
+    CToggle, CCheckbox, CBreadcrumb, CTabs
 } from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
+import ModalTestComponent from "./ModalTestComponent";
 
 const dataForBreadCrumb = [
     {
@@ -71,8 +72,6 @@ const tabData = [
     }];
 
 function App() {
-    let footerButton = <CButton id="sabu" name="Sabu"/>;
-    let body = <CButton id="sauravi" name="sauravi"/>;
     return (
         <div className="App">
             <header className="App-header">
@@ -81,14 +80,6 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <CButton id="save" name="Kaushal"/>
-                <CModal show={true}
-                        modalHeading="Modal Smriti"
-                        size="md"
-                        bodyChildren={body}
-                        footerChildren={footerButton}
-                        onHide={() => {
-                        }}/>
-
                 <CDropdown/>
                 <CInputGroup
                     prepend={
@@ -118,6 +109,7 @@ function App() {
                            isValid={true}
                            bsPrefix="form-check"
                 />
+                <ModalTestComponent/>
                 <HashRouter>
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
                     <CTabs data={tabData}/>

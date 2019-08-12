@@ -105,11 +105,13 @@ const CModal = props => {
 
 CModal.defaultProps = {
     centered: true,
-    closeButton: true
+    closeButton: true,
+    onHide: () => {}
 };
 
 CModal.propTypes = {
     id: PropTypes.string,
+    modalHeading: PropTypes.string.isRequired,
     animation: PropTypes.bool,
     autoFocus: PropTypes.bool,
     backdrop: PropTypes.bool || PropTypes.string,
@@ -128,7 +130,7 @@ CModal.propTypes = {
     onExit: PropTypes.func,
     onExited: PropTypes.func,
     onExiting: PropTypes.func,
-    onHide: PropTypes.func,
+    onHide: PropTypes.func.isRequired,
     onShow: PropTypes.func,
     restoreFocus: PropTypes.bool,
     scrollable: PropTypes.bool,
@@ -138,9 +140,9 @@ CModal.propTypes = {
     closeButton: PropTypes.bool,
     closeLabel: PropTypes.string,
     bsPrefixHeader: PropTypes.string,
-    asTitle: PropTypes.elementType,
+    asTitle: PropTypes.elementType, // as
     bsPrefixTitle: PropTypes.string,
-    asBody: PropTypes.elementType,
+    asBody: PropTypes.elementType, // as
     bsPrefixBody: PropTypes.string,
     footerAs: PropTypes.elementType,
     bsPrefixFooter: PropTypes.string

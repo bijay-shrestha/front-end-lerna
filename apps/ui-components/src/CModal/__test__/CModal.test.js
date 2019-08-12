@@ -3,10 +3,9 @@ import CModal from '../CModal';
 expect.addSnapshotSerializer(enzymeSerializer);
 
 describe('CModal Tests', () => {
-    let sWrapper, mockFunction;
+    let sWrapper;
     beforeEach(() => {
-        mockFunction = jest.fn();
-        sWrapper = shallow(<CModal/>);
+        sWrapper = shallow(<CModal modalHeading="Modal test"/>);
     });
 
     test('if CModal is defined', () => {
@@ -103,6 +102,12 @@ describe('CModal Tests', () => {
                 expect(propAvail).toContain(propsOfModalTitle[i])
             ));
         });
+
+        test('if Modal has non empty Heading', () => {
+            console.log(sWrapper.find('#title').text());
+            expect(sWrapper.find('#title').text()).not.toBe("");
+        });
+
     });
 
     describe('Modal.Body Tests', () => {
@@ -146,7 +151,6 @@ describe('CModal Tests', () => {
             ));
         });
     });
-
 
     describe('Snapshot Testing', () => {
         it('should match snapshot', () => {
