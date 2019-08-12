@@ -38,3 +38,42 @@ as	            elementType	        <DivStyledAsH4>    You can use a custom eleme
                                                 or <div>
 
 ```
+
+To use this component, create a boolean property, initially set to false  in the state of the component where modal is required.
+
+```javascript
+
+class ModalTestComponent extends PureComponent {
+
+    state = {
+        showModal: false
+    };
+
+    setShowModal = () => {
+        this.setState({showModal: !this.state.showModal});
+    };
+}
+```
+Usually modals are opened on certain events or button click.
+Pass this `setShowModal` or function that toggles the value of boolean property of state(`showModal`) 
+to the eventHandler(here, `onClickHandler`).
+
+```javascript
+ render() {
+        let footerButton = <CButton id="sabu" name="Sabu"/>;
+        let body = <> <h1>This is Modal body</h1><CButton id="sauravi" name="sauravi"/></>;
+        return (
+            <>
+                <CButton id="modal" name="Open Modal" onClickHandler={this.setShowModal}/>
+                <CModal show={this.state.showModal}
+                        modalHeading="Modal Smriti"
+                        size="md"
+                        bodyChildren={body}
+                        footerChildren={footerButton}
+                        onHide={this.setShowModal}
+                />
+            </>
+        );
+    }
+```
+`show` ,`modalHeading`,`bodyChildren` and `onHide` props are required. Other props mentioned above can be used according to requirement.
