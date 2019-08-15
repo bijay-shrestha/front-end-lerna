@@ -85,12 +85,6 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <CButton id="save" name="Kaushal"/>
-                <CSelect
-                    options={optionsArr}
-                    onChange={(e) => console.log(e)}
-                    className="select-container"
-                    classNamePrefix="select-menu"
-                />
                 <CDropdown/>
                 <CInputGroup
                     prepend={
@@ -124,8 +118,14 @@ function App() {
                     <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
                     <CTabs data={tabData}/>
                 </HashRouter>
-
+                <CSelect
+                    options={optionsArr}
+                    onChange={(e) => console.log(e)}
+                    className="select-input"
+                    classNamePrefix="select-input-pre"
+                />
             </header>
+
         </div>
     );
 }
