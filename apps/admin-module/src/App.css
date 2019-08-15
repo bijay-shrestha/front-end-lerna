@@ -23,6 +23,17 @@
   color: #61dafb;
 }
 
+.select-container {
+  background-color: chartreuse;
+  width: 200px;
+}
+
+.select-menu {
+  background-color: #0074D9;
+  width: 120px;
+  color: #111111;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

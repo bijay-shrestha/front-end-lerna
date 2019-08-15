@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InputGroup from "react-bootstrap/InputGroup";
-import {CButton, CDropdown, CInputGroup,
-    CToggle, CCheckbox, CBreadcrumb, CTabs} from "@cogent/ui-components";
+import {
+    CButton, CDropdown, CInputGroup,
+    CToggle, CCheckbox, CBreadcrumb, CTabs, CSelect
+} from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -68,6 +70,12 @@ const tabData = [
         eventKey: "/generalSetup/adminSetup/contact"
     }];
 
+const optionsArr = [
+    {value: 1, label: 'Chocolate'},
+    {value: 'strawberry', label: 'Strawberry'},
+    {value: 'vanilla', label: 'Vanilla'},
+];
+
 function App() {
     return (
         <div className="App">
@@ -77,6 +85,12 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <CButton id="save" name="Kaushal"/>
+                <CSelect
+                    options={optionsArr}
+                    onChange={(e) => console.log(e)}
+                    className="select-container"
+                    classNamePrefix="select-menu"
+                />
                 <CDropdown/>
                 <CInputGroup
                     prepend={

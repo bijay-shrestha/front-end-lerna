@@ -5,6 +5,7 @@ import CToggle from './src/CToggle';
 import CCheckbox from './src/CCheckbox';
 import CBreadcrumb from './src/CBreadcrumb';
 import CTabs from './src/CTabs';
+import CSelect from './src/CSelect'
 
 export {
     CButton,
@@ -13,5 +14,6 @@ export {
     CToggle,
     CCheckbox,
     CBreadcrumb,
-    CTabs
+    CTabs,
+    CSelect
 }
