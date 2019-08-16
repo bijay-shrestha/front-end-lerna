@@ -22,15 +22,15 @@ describe('CForm Component Tests', () => {
 
     test('if all props required for Form component are defined', () => {
         let propRequired = [
-            'id',
             '_ref',
-            'children',
             'as',
-            'inline',
             'bsPrefix',
+            'children',
+            'id',
+            'inline',
             'noValidate',
+            'onSubmit',
             'validated',
-            'onSubmit'
         ];
 
         let propsOfForm = Object.keys(wrapper.find('#form_test').props());

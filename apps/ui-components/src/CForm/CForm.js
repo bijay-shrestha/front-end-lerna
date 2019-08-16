@@ -4,26 +4,27 @@ import PropTypes from 'prop-types';
 
 const CForm = props => {
     const {
-        id,
         _ref,
-        children,
         as,
-        inline,
         bsPrefix,
+        children,
+        id,
+        inline,
         noValidate,
+        onSubmit,
         validated,
-        onSubmit
     } = props;
     return (
-        <Form id={"form".concat("_").concat(id)}
-              _ref={_ref}
-              children={children}
-              as={as}
-              inline={inline}
-              bsPrefix={bsPrefix}
-              noValidate={noValidate}
-              validated={validated}
-              onSubmit={onSubmit}
+        <Form
+            _ref={_ref}
+            as={as}
+            bsPrefix={bsPrefix}
+            children={children}
+            id={"form".concat("_").concat(id)}
+            inline={inline}
+            noValidate={noValidate}
+            onSubmit={onSubmit}
+            validated={validated}
         />
     );
 };
@@ -34,18 +35,18 @@ CForm.defaultProps = {
 };
 
 CForm.propTypes = {
-    id: PropTypes.string.isRequired,
     _ref: PropTypes.oneOfType([
         PropTypes.func, // for legacy refs
         PropTypes.shape({current: PropTypes.instanceOf(Element)})
     ]),
-    children: PropTypes.node,
     as: PropTypes.elementType,
-    inline: PropTypes.bool,
     bsPrefix: PropTypes.string,
+    children: PropTypes.node,
+    id: PropTypes.string.isRequired,
+    inline: PropTypes.bool,
     noValidate: PropTypes.bool,
+    onSubmit: PropTypes.func,
     validated: PropTypes.bool,
-    onSubmit: PropTypes.func
 };
 
 export default CForm;
