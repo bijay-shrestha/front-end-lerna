@@ -6,6 +6,7 @@ import CCheckbox from './src/CCheckbox';
 import CBreadcrumb from './src/CBreadcrumb';
 import CTabs from './src/CTabs';
 import CModal from './src/CModal';
+import CForm from './src/CForm';
 
 export {
     CButton,
@@ -15,5 +16,6 @@ export {
     CCheckbox,
     CBreadcrumb,
     CTabs,
-    CModal
+    CModal,
+    CForm
 }
