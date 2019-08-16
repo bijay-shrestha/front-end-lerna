@@ -1,6 +1,6 @@
 import CFormGroup from "../CFormGroup";
-import checkPropTypes from "check-prop-types";
-import CForm from "../../CForm";
+
+expect.addSnapshotSerializer(enzymeSerializer);
 
 describe('CFormGroup Component Tests', () => {
 
@@ -31,6 +31,12 @@ describe('CFormGroup Component Tests', () => {
         propRequired.forEach((propAvail, i) => (
             expect(propAvail).toContain(propsOfFormGroup[i])
         ));
+    });
+
+    describe('Snapshot Testing', () => {
+        test('if matches snapshot', () => {
+            expect(wrapper).toMatchSnapshot();
+        })
     });
 
 
