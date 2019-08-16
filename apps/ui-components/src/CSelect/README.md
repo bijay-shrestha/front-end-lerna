@@ -19,8 +19,11 @@ Next to use it, first import it, then simply use it as,
       onChange={(e) => console.log(e)}
    />
 ```
-We have to provide our options array of object and an eventlistner function for onChange. 
+We have to provide our options 'array of object' and an event listener function for onChange. 
 We can bind the selected value through`value` prop.
+
+To use the CSelect as **multi-select**, we simply have to pass in the prop *`isMulti`* set to true.
+When using as multi-select, it will bind data in array which we can get through `value` prop.
 
 ##Props of CSelect
 ```text
@@ -61,7 +64,7 @@ We can bind the selected value through`value` prop.
     noOptionsMessage: string - Text to display when there are no options
     onChange: function - Handle change events on the select
     onInputChange: function - Handle change events on the input
-    onKeyDown: function - Handle key down events on the select
+    onKeyDown: boolean - Handle key down events on the select
     onMenuClose: function - Handle the menu closing
     onMenuOpen: function - Handle the menu opening
     openMenuOnClick: boolean - Allows control of whether the menu is opened when the Select is clicked.

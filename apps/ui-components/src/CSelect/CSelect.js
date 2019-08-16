@@ -114,8 +114,8 @@ CSelect.defaultProps = {
     isMulti: false,
     onChange: () => {
     },
-    onKeyDown: () => true,
-    openMenuOnClick: () => true,
+    onKeyDown: true,
+    openMenuOnClick: true,
     options: [],
     placeholder: "Please from dropdown..."
 };
@@ -156,10 +156,10 @@ CSelect.propTypes = {
     noOptionsMessage: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onInputChange: PropTypes.func,
-    onKeyDown: PropTypes.func,
+    onKeyDown: PropTypes.bool,
     onMenuClose: PropTypes.func,
     onMenuOpen: PropTypes.func,
-    openMenuOnClick: PropTypes.func,
+    openMenuOnClick: PropTypes.bool,
     options: PropTypes.arrayOf(PropTypes.shape({
             value: PropTypes.any.isRequired,
             label: PropTypes.string.isRequired
