@@ -112,12 +112,11 @@ CSelect.defaultProps = {
     isClearable: true,
     isSearchable: true,
     isMulti: false,
-    onChange: () => {
-    },
+    onChange: () => {},
     onKeyDown: true,
     openMenuOnClick: true,
     options: [],
-    placeholder: "Please from dropdown..."
+    placeholder: "Select ..."
 };
 
 CSelect.propTypes = {

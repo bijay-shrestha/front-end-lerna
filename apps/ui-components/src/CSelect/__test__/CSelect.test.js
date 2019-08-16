@@ -9,7 +9,7 @@ describe('CSelect tests', () => {
         {value: 'vanilla', label: 'Vanilla'},
     ];
 
-    describe('Select Component tests', () => {
+    describe('CSelect Component tests', () => {
 
         beforeEach(() => {
             mockFunction = jest.fn();
