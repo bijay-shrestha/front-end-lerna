@@ -9,19 +9,19 @@ describe('CFLabel Component Tests', () => {
         wrapper = shallow(<CFLabel id="test" labelName="test"/>);
     });
 
-    test('if CFLabel Component is defined', () => {
+    it('should be defined', () => {
         expect(wrapper.find('CFLabel')).toBeDefined();
     });
 
-    test('if Form.Label component is defined', () => {
+    it('should have only one Form.Label component', () => {
         expect(wrapper.find('#label_test').length).toBe(1);
     });
 
-    test('if Form.Label component has a label name', () => {
+    it('should have a name', () => {
         expect(wrapper.find('#label_test').text()).not.toBe("");
     });
 
-    test('if all props required for Form.Label component are defined', () => {
+    it('should have all props available', () => {
         let propRequired = [
             '_ref',
             'as',
@@ -37,43 +37,25 @@ describe('CFLabel Component Tests', () => {
         ));
     });
 
-    test('if `sm` prop is used only with column prop', () => {
+    it('should pass `sm`,`md`,`lg` and `xl` props only when column prop is passed with boolean value true', () => {
+        const colProps = [
+            {sm: 4},
+            {md: 4},
+            {lg: 4},
+            {xl: 4}];
         wrapper.setProps({
-            column: true,
-            sm: 4
+            column: true
         });
-        expect(wrapper.find('#label_test').prop('sm')).toBe(4);
-
-    });
-
-    test('if  `md` props is used only with column prop', () => {
-        wrapper.setProps({
-            column: true,
-            md: 4
+        colProps.forEach(colProp => {
+            wrapper.setProps({
+                ...colProp
+            });
+            expect(wrapper.find('#label_test').prop(Object.keys(colProp)[0])).toBe(4);
         });
-        expect(wrapper.find('#label_test').prop('md')).toBe(4);
-    });
-
-    test('if `lg` prop is used only with column prop', () => {
-        wrapper.setProps({
-            column: true,
-            lg: 4
-        });
-        expect(wrapper.find('#label_test').prop('lg')).toBe(4);
-
-    });
-
-    test('if `xl` prop is used only with column prop', () => {
-        wrapper.setProps({
-            column: true,
-            xl: 4
-        });
-        expect(wrapper.find('#label_test').prop('xl')).toBe(4);
-
     });
 
     describe('Snapshot Testing', () => {
-        test('if matches snapshot', () => {
+        it('should match snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         })
     });

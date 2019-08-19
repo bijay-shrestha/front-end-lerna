@@ -6,7 +6,14 @@ class CFLabel extends PureComponent {
 
     addGridPropsIfColumnSetToTrue = column => {
         const {sm, md, lg, xl} = this.props;
-        return (column ? (sm ? {'sm': sm} : md ? {'md': md} : lg ? {'lg': lg} : {'xl': xl}) : '');
+        let colProps = {};
+        if (column) {
+            colProps = sm ? {...colProps, 'sm': sm} : colProps;
+            colProps = md ? {...colProps, 'md': md} : colProps;
+            colProps = lg ? {...colProps, 'lg': lg} : colProps;
+            colProps = xl ? {...colProps, 'xl': xl} : colProps;
+        }
+        return colProps;
     };
 
     getPropsForLabel = () => {
