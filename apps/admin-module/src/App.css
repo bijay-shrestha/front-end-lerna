@@ -14,6 +14,12 @@
 .select-input{
   width: 200px;
 }
+
+.card-component{
+ height: 100% !important;
+ background-color:#fdfdfd !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

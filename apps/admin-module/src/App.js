@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InputGroup from "react-bootstrap/InputGroup";
-import {Container,Row ,Col,Form } from "react-bootstrap";
+import {Container,Row ,Col,Form ,Card} from "react-bootstrap";
 import {
     CButton, CDropdown, CInputGroup,
     CToggle, CCheckbox, CBreadcrumb, CTabs, CSelect
@@ -99,9 +99,10 @@ function App() {
             <Container fluid="true">
                
                 <Row className="mb-4 ">
-                    <Col className="text-left">Button <CButton id="save" name="Kaushal"/></Col>
-                    <Col  className="text-left"><CDropdown/></Col>
-                    <Col  className="text-left"> <CInputGroup
+                    <Col className="text-left"><Card className="card-component"><Card.Body>Button <CButton id="save" name="Kaushal"/></Card.Body></Card></Col>
+                    <Col  className="text-left"><Card className="card-component"><Card.Body><CDropdown/></Card.Body></Card></Col>
+                    <Col  className="text-left"><Card className="card-component"><Card.Body> 
+                        <CInputGroup
                     prepend={
                         [<InputGroup.Text key="basic-addOn1" id="basic-addOn1">
                             Mr.
@@ -113,14 +114,24 @@ function App() {
                         </InputGroup.Text>]
                     }
                 />
+                </Card.Body></Card>
                 </Col>
-                    <Col  className="text-left">Toggle button<CToggle onLabel="On"
+                                   
+                </Row>
+
+                
+                <Row className="mb-4">
+                <Col  className="text-left"><Card className="card-component"><Card.Body>
+                        Toggle button<CToggle onLabel="On"
                          offLabel="Off"
                          onChange={() => {
                              console.log('Clicked')
-                         }}/></Col>
+                         }}/>
+                         </Card.Body></Card>
+                         </Col>
 
-                          <Col className="text-left"> Checkbox <CCheckbox id="checkbox"
+                          <Col className="text-left">
+                          <Card className="card-component"><Card.Body> Checkbox <CCheckbox id="checkbox"
                            label="Sabu"
                            onChange={(e) => console.log(e)}
                            title="Shakya"
@@ -130,44 +141,20 @@ function App() {
                     // isInvalid={true}
                            isValid={true}
                            bsPrefix="form-check"
-                /> </Col>
-                
-                </Row>
+                /> </Card.Body></Card>
+                </Col>
 
-                
-                <Row className="mb-4">
-                   
 
-                   <Col className="text-left " sm="4"> DropDown with user input
+                   <Col className="text-left " sm="4">
+                       <Card className="card-component"><Card.Body>DropDown with user input
                      <CSelect
                        options={optionsArr}
                        onChange={(e) => console.log(e)}
                        className="select-input"
                        classNamePrefix="select-input-pre"
-                   /> </Col>
+                   /> </Card.Body> </Card></Col>
                 </Row>
-                <Row class="mt-4">
-                <Form>
-                    <Form.Group as={Row} controlId="formPlaintextEmail">
-                        <Form.Label column sm="4">
-                        Email
-                        </Form.Label>
-                        <Col sm="4">
-                        <Form.Control plaintext readOnly defaultValue="email@example.com" />
-                        </Col>
-                    </Form.Group>
-
-                    <Form.Group as={Row} controlId="formPlaintextPassword">
-                        <Form.Label column sm="4">
-                        Password
-                        </Form.Label>
-                        <Col sm="8">
-                        <Form.Control type="password" placeholder="Password" />
-                        </Col>
-                    </Form.Group>
-                    </Form>
-
-               </Row>     
+               
             </Container>
 
         </div>
