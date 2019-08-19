@@ -3,9 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import {CButton, CForm, CToggle} from '@cogent/ui-components';
 import CFormGroup from "@cogent/c-formgroup";
+import CFLabel from "@cogent/c-f-label";
 
 function App() {
     let formComponents = (<>
+        <CFLabel
+            id="name"
+            labelName="Name"
+            column={true}
+            srOnly={false}
+            md={4}
+        />
         <input type="text" required/>
         <CButton id="c-button-2" type="submit" name="Submit"/>
     </>);
