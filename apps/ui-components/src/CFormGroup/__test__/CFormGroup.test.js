@@ -38,6 +38,4 @@ describe('CFormGroup Component Tests', () => {
             expect(wrapper).toMatchSnapshot();
         })
     });
-
-
 });

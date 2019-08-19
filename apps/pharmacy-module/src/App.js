@@ -2,12 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {CButton, CForm, CToggle} from '@cogent/ui-components';
+import CFormGroup from "@cogent/c-formgroup";
 
 function App() {
-    let form = (<>
+    let formComponents = (<>
         <input type="text" required/>
         <CButton id="c-button-2" type="submit" name="Submit"/>
     </>);
+    let form = (
+        <CFormGroup
+            id="test"
+            controlId="formHorizontalEmail"
+            children={formComponents}/>);
     return (
         <div className="App">
             <header className="App-header">
@@ -23,7 +29,7 @@ function App() {
                     inline={true}
                     noValidate={true}
                     validated={true}
-                    onSubmit={()=> console.log()}
+                    onSubmit={() => console.log()}
                 />
             </header>
         </div>
