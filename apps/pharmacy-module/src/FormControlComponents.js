@@ -3,6 +3,9 @@ import {CButton, CFControl, CFLabel} from "@cogent/ui-components";
 
 
 class FormControlComponents extends PureComponent {
+    state={
+        email:''
+    };
 
     render() {
         const options = (
@@ -27,6 +30,7 @@ class FormControlComponents extends PureComponent {
                     placeholder="Enter your email"
                     size="lg"
                     required={true}
+                    onChange={(e)=>console.log(e.target.value)}
                 />
                 <CFLabel
                     id="password"
