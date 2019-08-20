@@ -4,7 +4,7 @@ Form Label made using react-bootstrap's `Form.Label` component.
 To use it, first
 
 ```jsx harmony
-import Form from 'react-bootstrap/Form';
+import {CFLabel} from '@cogent/ui-components';
 ```
 Then simply use it,
 ```jsx harmony

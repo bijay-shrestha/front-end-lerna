@@ -1,27 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CButton, CForm, CToggle} from '@cogent/ui-components';
-import CFormGroup from "@cogent/c-formgroup";
-import CFLabel from "@cogent/c-f-label";
+import {CButton, CForm, CToggle, CFormGroup} from '@cogent/ui-components';
+import FormControlComponents from "./FormControlComponents";
 
 function App() {
-    let formComponents = (<>
-        <CFLabel
-            id="name"
-            labelName="Name"
-            column={true}
-            srOnly={false}
-            md={4}
-        />
-        <input type="text" required/>
-        <CButton id="c-button-2" type="submit" name="Submit"/>
-    </>);
     let form = (
         <CFormGroup
             id="test"
-            controlId="formHorizontalEmail"
-            children={formComponents}/>);
+            // controlId="formHorizontalEmail"
+            children={<FormControlComponents/>}/>);
     return (
         <div className="App">
             <header className="App-header">
@@ -36,7 +24,7 @@ function App() {
                     children={form}
                     inline={true}
                     noValidate={true}
-                    validated={true}
+                    // validated={true}
                     onSubmit={() => console.log()}
                 />
             </header>

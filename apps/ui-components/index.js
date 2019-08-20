@@ -7,6 +7,9 @@ import CBreadcrumb from './src/CBreadcrumb';
 import CTabs from './src/CTabs';
 import CModal from './src/CModal';
 import CForm from './src/CForm';
+import CFormGroup from './src/CFormGroup';
+import CFLabel from './src/CFLabel';
+import CFControl from './src/CFControl';
 
 export {
     CButton,
@@ -17,5 +20,8 @@ export {
     CBreadcrumb,
     CTabs,
     CModal,
-    CForm
+    CForm,
+    CFormGroup,
+    CFLabel,
+    CFControl
 }
