@@ -11,7 +11,7 @@ function App() {
                 id="test"
                 children={<FormControlComponents />}
                 noValidate={true}
-                // validated={true}
+                validated={true}
                 onSubmit={() => console.log()}
             />
         </div>

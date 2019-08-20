@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {CButton, CCol, CFControl, CFLabel, CFormGroup, CFRow, CRow, CToggle} from "@cogent/ui-components";
+import {CButton, CCol, CFControl, CFeedback, CFLabel, CFormGroup, CFRow, CRow, CToggle} from "@cogent/ui-components";
 import Col from "react-bootstrap/Col";
 
 
@@ -34,6 +34,8 @@ class FormControlComponents extends PureComponent {
                                 required={true}
                                 onChange={(e) => console.log(e.target.value)}
                             />
+                            <CFeedback id="email" feedbackMessage="Email looks good."/>
+                            <CFeedback id="email" feedbackMessage="Email looks bad." type="invalid"/>
                         </CFormGroup>
                     </CCol>
 

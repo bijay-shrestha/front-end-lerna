@@ -13,6 +13,7 @@ import CFControl from './src/CFControl';
 import CFRow from './src/CFRow';
 import CCol from './src/CCol';
 import CRow from './src/CRow';
+import CFeedback from './src/CFeedback';
 
 export {
     CButton,
@@ -29,5 +30,6 @@ export {
     CFControl,
     CFRow,
     CCol,
-    CRow
+    CRow,
+    CFeedback
 }
