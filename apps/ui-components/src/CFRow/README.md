@@ -1,15 +1,15 @@
-# CRow 
+# CFRow 
 
 Row component made using react-bootstrap's `Form.Row` component.
 To use it ,first import the component,
 
 ```jsx harmony
-import {CRow} from '@cogent/ui-components';
+import {CFRow} from '@cogent/ui-components';
 ```
 Then use it as,
 
 ```jsx harmony
-<CRow id="email">
+<CFRow id="email">
     <CFLabel
        id="name"
        labelName="Email"
@@ -26,9 +26,9 @@ Then use it as,
        required={true}
        onChange={(e) => console.log(e.target.value)}
     />
-</CRow>
+</CFRow>
 ```
-## CRow Props
+## CFRow Props
 
 ```
 as: elementType - defaultValue: <div> - You can use a custom element type for this component.

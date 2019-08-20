@@ -10,7 +10,7 @@ import CForm from './src/CForm';
 import CFormGroup from './src/CFormGroup';
 import CFLabel from './src/CFLabel';
 import CFControl from './src/CFControl';
-import CRow from './src/CRow';
+import CFRow from './src/CFRow';
 import CCol from './src/CCol';
 
 export {
@@ -26,6 +26,6 @@ export {
     CFormGroup,
     CFLabel,
     CFControl,
-    CRow,
+    CFRow,
     CCol
 }

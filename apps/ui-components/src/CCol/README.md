@@ -9,7 +9,7 @@ import {CCol} from '@cogent/ui-components';
 Then use it as,
 
 ```jsx harmony
-<CRow id="email">
+<CFRow id="email">
     <CCol id="emailLabel" lg={4}>
       <CFLabel
         id="name"
@@ -30,7 +30,7 @@ Then use it as,
           onChange={(e) => console.log(e.target.value)}
         />
     </CCol>
-</CRow>
+</CFRow>
 ```
 ## CCol Props
 

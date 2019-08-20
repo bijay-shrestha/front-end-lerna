@@ -1,16 +1,16 @@
-import CRow from "../CRow";
+import CFRow from "../CFRow";
 
 expect.addSnapshotSerializer(enzymeSerializer);
 
-describe('CRow Component Tests', () => {
+describe('CFRow Component Tests', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<CRow id="test"/>);
+        wrapper = shallow(<CFRow id="test"/>);
     });
 
     it('should be defined', () => {
-        expect(wrapper.find('CRow')).toBeDefined();
+        expect(wrapper.find('CFRow')).toBeDefined();
     });
 
     it('should have only one Form.Row component', () => {
