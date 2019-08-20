@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {CButton, CFControl, CFLabel, CRow} from "@cogent/ui-components";
+import {CButton, CCol, CFControl, CFLabel, CRow} from "@cogent/ui-components";
 
 
 class FormControlComponents extends PureComponent {
@@ -17,22 +17,26 @@ class FormControlComponents extends PureComponent {
         return (
             <div style={{}}>
                 <CRow id="email">
-                    <CFLabel
-                        id="name"
-                        labelName="Email"
-                        column={true}
-                        srOnly={false}
-                        md={4}
-                    />
-                    <CFControl
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        size="lg"
-                        required={true}
-                        onChange={(e) => console.log(e.target.value)}
-                    />
+                    <CCol id="emailLabel" lg={4}>
+                        <CFLabel
+                            id="name"
+                            labelName="Email"
+                            column={true}
+                            srOnly={false}
+                            md={4}
+                        />
+                    </CCol>
+                    <CCol id="email" lg={4}>
+                        <CFControl
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            size="lg"
+                            required={true}
+                            onChange={(e) => console.log(e.target.value)}
+                        />
+                    </CCol>
                 </CRow>
                 <CFLabel
                     id="password"

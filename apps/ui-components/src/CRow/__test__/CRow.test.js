@@ -1,5 +1,7 @@
 import CRow from "../CRow";
 
+expect.addSnapshotSerializer(enzymeSerializer);
+
 describe('CRow Component Tests', () => {
 
     let wrapper;
@@ -22,9 +24,9 @@ describe('CRow Component Tests', () => {
             'children',
             'id'
         ];
-        let propsOfFormLabel = Object.keys(wrapper.find('#row_test').props());
+        let propsOfCrow = Object.keys(wrapper.find('#row_test').props());
         propsAvailable.forEach((propAvail, i) => (
-            expect(propAvail).toContain(propsOfFormLabel[i])
+            expect(propAvail).toContain(propsOfCrow[i])
         ));
     });
 
