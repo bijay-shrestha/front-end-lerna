@@ -1,20 +1,20 @@
-import CFRow from "../CFRow";
+import CRow from "../CRow";
 
 expect.addSnapshotSerializer(enzymeSerializer);
 
-describe('CFRow Component Tests', () => {
+describe('CRow Component Tests', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<CFRow id="test"/>);
+        wrapper = shallow(<CRow id="test"/>);
     });
 
     it('should be defined', () => {
-        expect(wrapper.find('CFRow')).toBeDefined();
+        expect(wrapper.find('CRow')).toBeDefined();
     });
 
     it('should have only one Form.Row component', () => {
-        expect(wrapper.find('#fRow_test').length).toBe(1);
+        expect(wrapper.find('#row_test').length).toBe(1);
     });
 
     it('should have all props available', () => {
@@ -22,9 +22,10 @@ describe('CFRow Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
-            'id'
+            'id',
+            'noGutters'
         ];
-        let propsOfCrow = Object.keys(wrapper.find('#fRow_test').props());
+        let propsOfCrow = Object.keys(wrapper.find('#row_test').props());
         propsAvailable.forEach((propAvail, i) => (
             expect(propAvail).toContain(propsOfCrow[i])
         ));

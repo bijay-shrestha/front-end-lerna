@@ -2,6 +2,6 @@
 
 exports[`CFRow Component Tests Snapshot Testing should match snapshot 1`] = `
 <FormRow
-  id="row_test"
+  id="fRow_test"
 />
 `;

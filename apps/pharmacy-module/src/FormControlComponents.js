@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
-import {CButton, CCol, CFControl, CFLabel, CFRow} from "@cogent/ui-components";
+import {CButton, CCol, CFControl, CFLabel, CFormGroup, CFRow, CRow, CToggle} from "@cogent/ui-components";
+import Col from "react-bootstrap/Col";
 
 
 class FormControlComponents extends PureComponent {
@@ -15,90 +16,112 @@ class FormControlComponents extends PureComponent {
                 <option>3</option>
             </>);
         return (
-            <div style={{}}>
-                <CFRow id="email">
-                    <CCol id="emailLabel" lg={4}>
-                        <CFLabel
-                            id="name"
-                            labelName="Email"
-                            column={true}
-                            srOnly={false}
-                            md={4}
-                        />
+            <>
+                <CRow id="email">
+                    <CCol id="emailLabel" xl={6}>
+                        <CFormGroup
+                            id="email">
+                            <CFLabel
+                                id="name"
+                                labelName="Email"
+                            />
+                            <CFControl
+                                id="email"
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                size="lg"
+                                required={true}
+                                onChange={(e) => console.log(e.target.value)}
+                            />
+                        </CFormGroup>
                     </CCol>
-                    <CCol id="email" lg={4}>
-                        <CFControl
-                            id="email"
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            size="lg"
-                            required={true}
-                            onChange={(e) => console.log(e.target.value)}
-                        />
+
+                </CRow>
+
+                <CFRow id="passwordRow">
+                    <CCol id="passLabel" md={6}>
+                        <CFormGroup id="password">
+                            <CFLabel
+                                id="password"
+                                labelName="Password"
+                            />
+                            <CFControl
+                                id="password"
+                                type="password"
+                                placeholder="Your password here."
+                                size="lg"
+                                autoComplete="off"
+                            />
+                        </CFormGroup>
                     </CCol>
                 </CFRow>
-                <CFLabel
-                    id="password"
-                    labelName="Password"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl
-                    id="password"
-                    type="password"
-                    placeholder="Your password here."
-                    size="lg"
-                    autoComplete="off"
-                />
-                <CFLabel
-                    id="dept"
-                    labelName="Department"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl
-                    id="department"
-                    as="select"
-                    children={options}
-                />
-                <CFLabel
-                    id="textarea"
-                    labelName="Description"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl
-                    id="text"
-                    as="textarea"
-                    rows="2"
-                />
-                <CFLabel
-                    id="plain"
-                    labelName="Plain Text"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl plaintext readOnly defaultValue="I am a plain text"/>
-                <CFLabel
-                    id="textInput"
-                    labelName="Name"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl
-                    id="name"
-                    type="text"
-                    placeholder="Name goes here"
-                />
-                <br/>
-                <CButton id="c-button-2" type="submit" name="Submit"/>
-            </div>
+                <CFormGroup id="select" as={Col}>
+                    <CFLabel
+                        id="dept"
+                        labelName="Department"
+                    />
+                    <CFControl
+                        id="department"
+                        as="select"
+                        children={options}
+                    />
+                </CFormGroup>
+                <CRow id="textArea">
+                    <CCol id="labelOfText" xs={4}>
+                        <CFLabel
+                            id="textarea"
+                            labelName="Description"
+                        />
+                    </CCol>
+                    <CCol id="textAreaCol" xs={8}>
+                        <CFControl
+                            id="text"
+                            as="textarea"
+                            rows="2"
+                        />
+                    </CCol>
+                </CRow>
+
+                <CRow id="plainText">
+                    <CFormGroup id="plaintextGroup" as={Col}>
+                        <CFLabel
+                            id="plainText"
+                            labelName="Plain Text"
+                        />
+                        <CFControl plaintext readOnly defaultValue="I am a plain text"/>
+                    </CFormGroup>
+                </CRow>
+
+                <CRow id="name">
+                    <CCol id="nameCol" xl={6}>
+                        <CFormGroup
+                            id="name">
+                            <CFLabel
+                                id="textInput"
+                                labelName="Name"
+                            />
+                            <CFControl
+                                id="name"
+                                type="text"
+                                placeholder="Name goes here"
+                            />
+                        </CFormGroup>
+                    </CCol>
+                </CRow>
+                <CRow id="buttons">
+                    <CCol id="Submit" md={4}>
+                        <CButton id="c-button-2" type="submit" name="Submit"/>
+                    </CCol>
+                    <CCol id="Bijay" md={4}>
+                        <CButton id="c-button-1" name="Bijay"/>
+                    </CCol>
+                    <CCol id="toggle" md={4}>
+                        <CToggle id="c-toggle-1" onLabel="On" offLabel="Off"
+                                 onChange={() => console.log('Hello World')}/>
+                    </CCol>
+                </CRow>
+            </>
         );
     }
 }

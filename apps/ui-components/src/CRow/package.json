@@ -1,7 +1,7 @@
 {
-  "name": "@cogent/c-f-row",
+  "name": "@cogent/c-row",
   "version": "0.0.0",
-  "main": "CFRow.js",
+  "main": "CRow.js",
   "author": "Sabu Shakya",
   "license": "MIT",
   "private": true

@@ -12,6 +12,7 @@ import CFLabel from './src/CFLabel';
 import CFControl from './src/CFControl';
 import CFRow from './src/CFRow';
 import CCol from './src/CCol';
+import CRow from './src/CRow';
 
 export {
     CButton,
@@ -27,5 +28,6 @@ export {
     CFLabel,
     CFControl,
     CFRow,
-    CCol
+    CCol,
+    CRow
 }

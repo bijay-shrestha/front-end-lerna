@@ -1,29 +1,32 @@
 import React from 'react';
-import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
 import PropTypes from 'prop-types';
 
-const CFRow = props => {
+const CRow = props => {
     const {
         as,
         bsPrefix,
         children,
-        id
+        id,
+        noGutters
     } = props;
     return (
-        <Form.Row
+        <Row
             as={as}
             bsPrefix={bsPrefix}
             children={children}
-            id={"fRow_".concat(id)}
+            id={"row_".concat(id)}
+            noGutters={noGutters}
         />
     )
 };
 
-CFRow.propTypes = {
+CRow.propTypes = {
     as: PropTypes.elementType,
     bsPrefix: PropTypes.string,
     children: PropTypes.node,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
+    noGutters: PropTypes.bool
 };
 
-export default CFRow;
+export default CRow;
