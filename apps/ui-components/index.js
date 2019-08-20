@@ -10,6 +10,7 @@ import CForm from './src/CForm';
 import CFormGroup from './src/CFormGroup';
 import CFLabel from './src/CFLabel';
 import CFControl from './src/CFControl';
+import CRow from './src/CRow';
 
 export {
     CButton,
@@ -23,5 +24,6 @@ export {
     CForm,
     CFormGroup,
     CFLabel,
-    CFControl
+    CFControl,
+    CRow
 }

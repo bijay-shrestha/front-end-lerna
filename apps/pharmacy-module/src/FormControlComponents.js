@@ -1,10 +1,10 @@
 import React, {PureComponent} from 'react';
-import {CButton, CFControl, CFLabel} from "@cogent/ui-components";
+import {CButton, CFControl, CFLabel, CRow} from "@cogent/ui-components";
 
 
 class FormControlComponents extends PureComponent {
-    state={
-        email:''
+    state = {
+        email: ''
     };
 
     render() {
@@ -16,22 +16,24 @@ class FormControlComponents extends PureComponent {
             </>);
         return (
             <div style={{}}>
-                <CFLabel
-                    id="name"
-                    labelName="Email"
-                    column={true}
-                    srOnly={false}
-                    md={4}
-                />
-                <CFControl
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    size="lg"
-                    required={true}
-                    onChange={(e)=>console.log(e.target.value)}
-                />
+                <CRow id="email">
+                    <CFLabel
+                        id="name"
+                        labelName="Email"
+                        column={true}
+                        srOnly={false}
+                        md={4}
+                    />
+                    <CFControl
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        size="lg"
+                        required={true}
+                        onChange={(e) => console.log(e.target.value)}
+                    />
+                </CRow>
                 <CFLabel
                     id="password"
                     labelName="Password"

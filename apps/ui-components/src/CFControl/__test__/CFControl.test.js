@@ -42,9 +42,9 @@ describe('CFControl Component Tests', () => {
             'type',
             'value',
         ];
-        let propsOfFormLabel = Object.keys(wrapper.find('#fControl_test').props());
+        let propsOfFormControl = Object.keys(wrapper.find('#fControl_test').props());
         propsAvailable.forEach((propAvail, i) => (
-            expect(propAvail).toContain(propsOfFormLabel[i])
+            expect(propAvail).toContain(propsOfFormControl[i])
         ));
     });
 
