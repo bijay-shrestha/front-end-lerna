@@ -5,8 +5,8 @@ import Proptypes from 'prop-types';
 const CFeedback = props => {
     const {
         as,
+        message,
         id,
-        feedbackMessage,
         type
     } = props;
     return (
@@ -15,7 +15,7 @@ const CFeedback = props => {
             id={"feedback_".concat(id)}
             type={type}
         >
-            {feedbackMessage}
+            {message}
         </FormControl.Feedback>
     )
 };
@@ -23,7 +23,7 @@ const CFeedback = props => {
 CFeedback.propTypes = {
     as: Proptypes.elementType,
     id: Proptypes.string.isRequired,
-    feedbackMessage: Proptypes.string.isRequired,
+    message: Proptypes.string.isRequired,
     type: Proptypes.string
 };
 export default CFeedback;

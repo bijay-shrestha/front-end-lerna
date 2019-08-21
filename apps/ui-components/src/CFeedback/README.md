@@ -27,8 +27,8 @@ Then use it as,
        required={true}
        onChange={(e) => console.log(e.target.value)}
     />
-    <CFeedback id="email" feedbackMessage="Email looks good."/>
-    <CFeedback id="email" feedbackMessage="Email looks bad." type="invalid"/>
+    <CFeedback id="email" message="Email looks good."/>
+    <CFeedback id="email" message="Email looks bad." type="invalid"/>
   </CFormGroup>
 </CForm>
 ```
@@ -38,6 +38,6 @@ Then use it as,
 ```text
 as: elementType - You can use a custom element type for this component.
 id: string - Id of the component.
-feedbackMessage: string - A feedback message to display.
+message: string - A feedback message to display.
 type: 'valid' | 'invalid' -  defaultValue:'valid' - Specify whether the feedback is for valid or invalid fields.                                                  
 ```

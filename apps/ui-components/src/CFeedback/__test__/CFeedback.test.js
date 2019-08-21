@@ -6,7 +6,7 @@ describe('CFeedback Component Tests', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<CFeedback id="test" feedbackMessage="You're doing good!"/>);
+        wrapper = shallow(<CFeedback id="test" message="You're doing good!"/>);
     });
 
     it('should be defined', () => {

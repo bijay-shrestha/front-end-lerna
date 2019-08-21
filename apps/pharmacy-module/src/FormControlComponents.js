@@ -34,9 +34,12 @@ class FormControlComponents extends PureComponent {
                                 required={true}
                                 onChange={(e) => console.log(e.target.value)}
                             />
-                            <CFeedback id="email" feedbackMessage="Email looks good."/>
-                            <CFeedback id="email" feedbackMessage="Email looks bad." type="invalid"/>
+                            <CFeedback id="email" message="Email looks good."/>
+                            <CFeedback id="email" message="Email looks bad." type="invalid"/>
                         </CFormGroup>
+                        <CFormGroup>
+                        </CFormGroup>
+
                     </CCol>
 
                 </CRow>
@@ -53,8 +56,7 @@ class FormControlComponents extends PureComponent {
                                 type="password"
                                 placeholder="Your password here."
                                 size="lg"
-                                autoComplete="off"
-                            />
+                                autoComplete="off" />
                         </CFormGroup>
                     </CCol>
                 </CFRow>
