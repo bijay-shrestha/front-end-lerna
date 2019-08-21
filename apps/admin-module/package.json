@@ -6,8 +6,8 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@cogent/ui-components": "0.0.0",
     "@cogent/commons": "0.0.0",
+    "@cogent/ui-components": "0.0.0",
     "camelcase": "^5.2.0",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
@@ -54,5 +54,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.15",
+    "chroma-js": "^2.0.4",
+    "emotion": "^10.0.14"
   }
 }
