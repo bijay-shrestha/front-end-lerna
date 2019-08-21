@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
 import InputGroup from "react-bootstrap/InputGroup";
-import {Container,Row ,Col,Form ,Card} from "react-bootstrap";
+import {Container,Row ,Col,Form ,Card ,Button,FormControl} from "react-bootstrap";
 import {
     CButton, CDropdown, CInputGroup,
     CToggle, CCheckbox, CBreadcrumb, CTabs, CSelect
@@ -80,29 +81,102 @@ const optionsArr = [
 function App() {
     return (
         <div className="App">
-            <header className="App-header mb-4">
-                {/* <img src={logo} className="App-logo" alt="logo"/> */}
-                {/* <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p> */}
-               
+            <header className="mb-4 text-center">.
+                 <img src="cog-logo.png" className="logo " alt="logo"/> 
+                 <h1>
+                    React Components Library 
+                </h1> 
+                <div className="search-box">
+                <InputGroup className="mb-3">
+                    <FormControl
+                    placeholder="Search Components"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                    />
+                    <InputGroup.Append>
+                    <Button variant="primary "><i class="fa fa-search" ></i>&nbsp;Search</Button>
+                    </InputGroup.Append>
+                </InputGroup>
+                </div>
                 
+            </header>
+            <hr></hr>
+
+            <Container fluid="true">   
+
+             <Row className="mb-4 ">
+                <Col sm={12}  md={6} lg={4} className="mb-4" >
+                    
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Bread Crumb</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                   
+               <Card.Body>
+               <HashRouter>
+                    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>                  
+                </HashRouter>              
                
-              
-                <HashRouter>
-                    <CBreadcrumb breadcrumbData={dataForBreadCrumb}/>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when </p>
+                        </Card.Body>
+                </Card>
+                </Col>  
+
+                <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Tabs</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <HashRouter>                    
                     <CTabs data={tabData}/>
                 </HashRouter>
-               
-            </header>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col> 
 
-            <Container fluid="true">
-               
-                <Row className="mb-4 ">
-                    <Col className="text-left"><Card className="card-component"><Card.Body>Button <CButton id="save" name="Kaushal"/></Card.Body></Card></Col>
-                    <Col  className="text-left"><Card className="card-component"><Card.Body><CDropdown/></Card.Body></Card></Col>
-                    <Col  className="text-left"><Card className="card-component"><Card.Body> 
-                        <CInputGroup
+                 <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Button</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body >
+                <CButton id="save"  name="Kaushal"/>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>  
+
+                <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Drop Down</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <CDropdown/>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>   
+
+                 <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Input gp</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <CInputGroup
                     prepend={
                         [<InputGroup.Text key="basic-addOn1" id="basic-addOn1">
                             Mr.
@@ -114,24 +188,41 @@ function App() {
                         </InputGroup.Text>]
                     }
                 />
-                </Card.Body></Card>
-                </Col>
-                                   
-                </Row>
-
-                
-                <Row className="mb-4">
-                <Col  className="text-left"><Card className="card-component"><Card.Body>
-                        Toggle button<CToggle onLabel="On"
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>     
+                    
+                    
+                <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Toogle Button</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <CToggle onLabel="On"
                          offLabel="Off"
                          onChange={() => {
                              console.log('Clicked')
                          }}/>
-                         </Card.Body></Card>
-                         </Col>
-
-                          <Col className="text-left">
-                          <Card className="card-component"><Card.Body> Checkbox <CCheckbox id="checkbox"
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>     
+                                   
+                <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">Checkbox</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <CCheckbox id="checkbox"
                            label="Sabu"
                            onChange={(e) => console.log(e)}
                            title="Shakya"
@@ -141,18 +232,39 @@ function App() {
                     // isInvalid={true}
                            isValid={true}
                            bsPrefix="form-check"
-                /> </Card.Body></Card>
-                </Col>
-
-
-                   <Col className="text-left " sm="4">
-                       <Card className="card-component"><Card.Body>DropDown with user input
-                     <CSelect
+                /> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>     
+                                   
+               
+                                    
+                <Col sm={12}  md={6} lg={4} className="mb-4">
+                <Card className="card-component">
+                    <Card.Title> <h5 className="pull-left">DropDown with user input</h5>
+                    <a href="#" class="pull-right"><i class="fa fa-file-code-o" ></i>&nbsp;View Source code</a>
+               </Card.Title>
+                <Card.Body>
+                <CSelect
                        options={optionsArr}
                        onChange={(e) => console.log(e)}
                        className="select-input"
                        classNamePrefix="select-input-pre"
-                   /> </Card.Body> </Card></Col>
+                   />
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+                        </p>
+                     
+                </Card.Body>
+                </Card>
+                </Col>     
+                                   
+                          
+
                 </Row>
                
             </Container>
