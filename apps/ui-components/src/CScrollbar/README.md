@@ -6,5 +6,6 @@ To use this component first ensure `react-custom-scrollbars` is installed.
 
 ## Installation
 ```text
+    
     yarn add react-custom-scrollbars
 ```

@@ -17,6 +17,38 @@ describe('CScrollbar Tests', () => {
         expect(sWrapper.find('#scrollbar_test').length).toBe(1);
     });
 
+    it('should have all props available', () => {
+        let propsAvailable = [
+            'autoHeight',
+            'autoHeightMax',
+            'autoHeightMin',
+            'autoHide',
+            'autoHideDuration',
+            'autoHideTimeout',
+            'children',
+            'hideTracksWhenNotNeeded',
+            'id',
+            'onScroll',
+            'onScrollFrame',
+            'onScrollStart',
+            'onScrollStop',
+            'onUpdate',
+            'renderThumbHorizontal',
+            'renderThumbVertical',
+            'renderTrackHorizontal',
+            'renderTrackVertical',
+            'renderView',
+            'thumbMinSize',
+            'thumbSize',
+            'universal',
+        ];
+        let propsOfScrollbar = Object.keys(sWrapper.find('#scrollbar_test').props());
+        propsAvailable.forEach((propAvail, i) => (
+            expect(propAvail).toContain(propsOfScrollbar[i])
+        ));
+    });
+
+
     // it('should ', () => {
     //
     // });
