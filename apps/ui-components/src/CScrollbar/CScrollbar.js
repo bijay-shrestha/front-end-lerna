@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 class CScrollbar extends PureComponent {
-
     render() {
         const {
             autoHeight,
@@ -66,6 +65,15 @@ class CScrollbar extends PureComponent {
     }
 }
 
+CScrollbar.defaultProps = {
+    renderTrackVertical: props => <div {...props} className="track-vertical"/>,
+    renderThumbVertical: props => <div {...props} className="thumb-vertical"/>,
+    renderTrackHorizontal: props => <div {...props} className="track-horizontal"/>,
+    renderThumbHorizontal: props => <div {...props} className="thumb-horizontal"/>,
+    renderView: props => <div {...props} className="view"/>,
+    thumbSize: 10,
+};
+
 CScrollbar.propTypes = {
     autoHeight: PropTypes.bool,
     autoHeightMax: PropTypes.number,
@@ -76,13 +84,13 @@ CScrollbar.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     hideTracksWhenNotNeeded: PropTypes.bool,
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     onScroll: PropTypes.func,
     onScrollFrame: PropTypes.func,
     onScrollStart: PropTypes.func,
     onScrollStop: PropTypes.func,
     onUpdate: PropTypes.func,
-    ref:PropTypes.oneOfType([
+    ref: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.shape({current: PropTypes.instanceOf(Element)})
     ]),

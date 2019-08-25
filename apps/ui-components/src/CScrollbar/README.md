@@ -70,7 +70,7 @@ renderTrackHorizontal: (Function) Horizontal thumb element.(change css of the ho
 
 renderTrackVertical: (Function) Vertical track element.(change css of the vertical scrollbar background)
 
-renderView:  (Function) The element your content will be rendered in
+renderView:  (Function) The area within scrollbar where your content will be rendered.
 
 style: (Object) To add inline css.
 
@@ -177,3 +177,8 @@ class ScrollerComponentTest extends PureComponent {
     }
 }
 ```
+
+# References
+
+-[x] [Malte Wessel](https://malte-wessel.com/react-custom-scrollbars/)
+-[x] [Issue fix](https://github.com/malte-wessel/react-custom-scrollbars/issues/119)

@@ -43,15 +43,10 @@ class ScrollerComponentTest extends PureComponent {
             </>);
         return (
             <CScrollbar
-                _ref={c => { this.scrollbarsRef = c }}
+                _ref={element => {this.scrollbarsRef = element}}
                 id="test"
                 style={{height: 100}}
                 className="abc"
-                renderTrackVertical={props => <div {...props} className="track-vertical"/>}
-                renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}
-                renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
-                renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}
-                renderView={props => <div {...props} className="view"/>}
             >
                 {scrollContent}
             </CScrollbar>

@@ -22,6 +22,7 @@ exports[`CScrollbar Tests Snapshot Testing should match snapshot 1`] = `
   renderView={[Function]}
   tagName="div"
   thumbMinSize={30}
+  thumbSize={25}
   universal={false}
 />
 `;

@@ -300,7 +300,7 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Scrollbar</h5>
-                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"/>&nbsp;View
                                     Source
                                     code</a>
                             </Card.Title>
