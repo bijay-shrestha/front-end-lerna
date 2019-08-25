@@ -3,10 +3,17 @@ import CScrollbar from "../CScrollbar";
 expect.addSnapshotSerializer(enzymeSerializer);
 
 describe('CScrollbar Tests', () => {
-    let sWrapper, mockFunction;
+    let sWrapper, mockFunction,mockFunction1;
 
     beforeEach(() => {
-        sWrapper = shallow(<CScrollbar id="test"/>);
+        mockFunction = jest.fn();
+        mockFunction1 = jest.fn();
+        sWrapper = shallow(<CScrollbar id="test"
+                                       onScroll={mockFunction}
+                                       onScrollFrame={mockFunction}
+                                       onScrollStart={mockFunction}
+                                       onScrollStop={mockFunction}
+                                       onUpdate={mockFunction1}/>);
     });
 
     it('should be defined', () => {
@@ -26,6 +33,7 @@ describe('CScrollbar Tests', () => {
             'autoHideDuration',
             'autoHideTimeout',
             'children',
+            'className',
             'hideTracksWhenNotNeeded',
             'id',
             'onScroll',
@@ -33,11 +41,13 @@ describe('CScrollbar Tests', () => {
             'onScrollStart',
             'onScrollStop',
             'onUpdate',
+            // 'ref',
             'renderThumbHorizontal',
             'renderThumbVertical',
             'renderTrackHorizontal',
             'renderTrackVertical',
             'renderView',
+            'style',
             'thumbMinSize',
             'thumbSize',
             'universal',
@@ -48,14 +58,34 @@ describe('CScrollbar Tests', () => {
         ));
     });
 
+    it('should call the mockFunction onScroll Event', () => {
+        sWrapper.find('#scrollbar_test').simulate('scroll');
+        expect(mockFunction).toHaveBeenCalled();
+    });
 
-    // it('should ', () => {
-    //
-    // });
+    it('should call the mockFunction onScrollFrame Event', () => {
+        sWrapper.find('#scrollbar_test').simulate('scrollFrame');
+        expect(mockFunction).toHaveBeenCalled();
+    });
 
-    // describe('Snapshot Testing', () => {
-    //     it('should match snapshot', () => {
-    //         expect(sWrapper).toMatchSnapshot();
-    //     })
-    // });
+    it('should call the mockFunction onScrollStart Event', () => {
+        sWrapper.find('#scrollbar_test').simulate('scrollStart');
+        expect(mockFunction).toHaveBeenCalled();
+    });
+
+    it('should call the mockFunction onScrollStop Event', () => {
+        sWrapper.find('#scrollbar_test').simulate('scrollStop');
+        expect(mockFunction).toHaveBeenCalled();
+    });
+
+    it('should call the mockFunction1 onUpdate', () => {
+        sWrapper.find('#scrollbar_test').simulate('update');
+        expect(mockFunction1).toHaveBeenCalled();
+    });
+
+    describe('Snapshot Testing', () => {
+        it('should match snapshot', () => {
+            expect(sWrapper).toMatchSnapshot();
+        })
+    });
 });

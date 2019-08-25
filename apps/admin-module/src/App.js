@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import InputGroup from "react-bootstrap/InputGroup";
 import {Container, Row, Col, Form, Card, Button, FormControl} from "react-bootstrap";
 import {
     CButton, CDropdown, CInputGroup,
-    CToggle, CCheckbox, CBreadcrumb, CTabs, CSelect
+    CToggle, CCheckbox, CBreadcrumb, CTabs, CSelect, CScrollbar
 } from "@cogent/ui-components";
 import {HashRouter} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 import ModalTestComponent from "./ModalTestComponent";
+import ScrollerComponentTest from "./ScrollerComponentTest";
 
 const dataForBreadCrumb = [
     {
@@ -95,7 +95,7 @@ function App() {
                             aria-describedby="basic-addon2"
                         />
                         <InputGroup.Append>
-                            <Button variant="primary "><i class="fa fa-search"></i>&nbsp;Search</Button>
+                            <Button variant="primary "><i className="fa fa-search"></i>&nbsp;Search</Button>
                         </InputGroup.Append>
                     </InputGroup>
                 </div>
@@ -110,7 +110,8 @@ function App() {
 
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Bread Crumb</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
 
@@ -129,7 +130,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Tabs</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -147,7 +149,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Button</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -163,7 +166,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Drop Down</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -179,7 +183,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Input gp</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -207,7 +212,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Toogle Button</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -227,7 +233,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Checkbox</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -254,7 +261,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">DropDown with user input</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -275,7 +283,8 @@ function App() {
                     <Col sm={12} md={6} lg={4} className="mb-4">
                         <Card className="card-component">
                             <Card.Title><h5 className="pull-left">Modal</h5>
-                                <a href="#" class="pull-right"><i class="fa fa-file-code-o"></i>&nbsp;View Source
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
                                     code</a>
                             </Card.Title>
                             <Card.Body>
@@ -284,6 +293,22 @@ function App() {
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
                                 </p>
 
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col sm={12} md={6} lg={4} className="mb-4">
+                        <Card className="card-component">
+                            <Card.Title><h5 className="pull-left">Scrollbar</h5>
+                                <a href="#" className="pull-right"><i className="fa fa-file-code-o"></i>&nbsp;View
+                                    Source
+                                    code</a>
+                            </Card.Title>
+                            <Card.Body>
+                                <ScrollerComponentTest/>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                </p>
                             </Card.Body>
                         </Card>
                     </Col>
