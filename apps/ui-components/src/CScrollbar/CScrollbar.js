@@ -71,7 +71,7 @@ CScrollbar.defaultProps = {
     renderTrackHorizontal: props => <div {...props} className="track-horizontal"/>,
     renderThumbHorizontal: props => <div {...props} className="thumb-horizontal"/>,
     renderView: props => <div {...props} className="view"/>,
-    thumbSize: 10,
+    thumbSize: 30,
 };
 
 CScrollbar.propTypes = {

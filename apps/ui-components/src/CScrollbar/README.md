@@ -177,6 +177,10 @@ class ScrollerComponentTest extends PureComponent {
     }
 }
 ```
+**`Note:`** While using the customization props(renderTrackHorizontal, renderThumbHorizontal, renderTrackVertical, 
+renderThumbVertical,renderView), we will always need to pass through the given props for the respective element like 
+in the example above: <div {...props} className="track-horizontal"/>. This is because we need to pass some default 
+styles down to the element in order to make the component work.
 
 # References
 
