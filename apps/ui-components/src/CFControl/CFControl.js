@@ -14,9 +14,12 @@ const CFControl = props => {
         id,
         isInvalid,
         isValid,
+        max,
+        min,
         multiple,
         name,
         onChange,
+        pattern,
         placeholder,
         plaintext,
         readOnly,
@@ -38,9 +41,12 @@ const CFControl = props => {
             id={"fControl_".concat(id)}
             isInvalid={isInvalid}
             isValid={isValid}
+            max={max}
+            min={min}
             multiple={multiple}
             name={name}
             onChange={onChange}
+            pattern={pattern}
             placeholder={placeholder}
             plaintext={plaintext}
             readOnly={readOnly}
@@ -59,7 +65,7 @@ CFControl.propTypes = {
         PropTypes.shape({current: PropTypes.instanceOf(Element)})
     ]),
     as: PropTypes.elementType,
-    autoComplete:PropTypes.string,
+    autoComplete: PropTypes.string,
     bsPrefix: PropTypes.string,
     children: PropTypes.node,
     defaultValue: PropTypes.string,
@@ -67,14 +73,17 @@ CFControl.propTypes = {
     id: PropTypes.string,
     isInvalid: PropTypes.bool,
     isValid: PropTypes.bool,
+    max: PropTypes.number,
+    min: PropTypes.number,
     multiple: PropTypes.bool,
     name: PropTypes.string,
     onChange: PropTypes.func,
+    pattern: PropTypes.string,
     placeholder: PropTypes.string,
     plaintext: PropTypes.bool,
     readOnly: PropTypes.bool,
     required: PropTypes.bool,
-    rows:PropTypes.string,
+    rows: PropTypes.string,
     size: PropTypes.string, // 'sm','lg
     type: PropTypes.string,
     value: PropTypes.string,
