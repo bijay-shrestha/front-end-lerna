@@ -5,7 +5,7 @@ Form component made using react-bootstrap's form.
 To use it, first
 
 ```jsx harmony
-import Form from 'react-bootstrap/Form';
+ import {CForm} from "@cogent/ui-components";
 ```
 Then simply use it,
 
@@ -37,8 +37,8 @@ id: string - Unique id of the form component,
 
 inline: boolean - defaultValue: false -	Display the series of labels, form controls, and buttons on a single horizontal row,
 
-noValidate: boolean,
-
+noValidate: boolean - Determines whether form-data should be validated or not on submission. When set to true,specifies that the form-data should not be validated on submission.
+                                                                                                             
 onSubmit: function - The method that handles the form submit action.,
 
 validated: boolean - Mark a form as having been validated. Setting it to true will toggle any validation styles on the forms elements.,
