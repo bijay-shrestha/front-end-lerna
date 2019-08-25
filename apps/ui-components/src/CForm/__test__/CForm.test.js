@@ -26,6 +26,7 @@ describe('CForm Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
+            'className',
             'id',
             'inline',
             'noValidate',
