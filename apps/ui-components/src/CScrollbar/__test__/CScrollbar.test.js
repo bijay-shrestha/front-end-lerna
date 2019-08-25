@@ -41,7 +41,6 @@ describe('CScrollbar Tests', () => {
             'onScrollStart',
             'onScrollStop',
             'onUpdate',
-            // 'ref',
             'renderThumbHorizontal',
             'renderThumbVertical',
             'renderTrackHorizontal',
