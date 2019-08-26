@@ -23,6 +23,7 @@ describe('CFormGroup Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
+            'className',
             'controlId',
             'id'
         ];

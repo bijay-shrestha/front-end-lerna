@@ -8,6 +8,7 @@ const CFormGroup = props => {
         as,
         bsPrefix,
         children,
+        className,
         controlId,
         id
     } = props;
@@ -17,6 +18,7 @@ const CFormGroup = props => {
             as={as}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             controlId={controlId}
             id={"group".concat("_").concat(id)}
         />)
@@ -30,6 +32,7 @@ CFormGroup.propTypes = {
     as: PropTypes.elementType,
     bsPrefix: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
     controlId: PropTypes.string,
     id: PropTypes.string
 };

@@ -7,6 +7,7 @@ const CRow = props => {
         as,
         bsPrefix,
         children,
+        className,
         id,
         noGutters
     } = props;
@@ -15,6 +16,7 @@ const CRow = props => {
             as={as}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             id={"row_".concat(id)}
             noGutters={noGutters}
         />
@@ -25,6 +27,7 @@ CRow.propTypes = {
     as: PropTypes.elementType,
     bsPrefix: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
     id: PropTypes.string.isRequired,
     noGutters: PropTypes.bool
 };

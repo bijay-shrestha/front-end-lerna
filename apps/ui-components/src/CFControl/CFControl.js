@@ -9,6 +9,7 @@ const CFControl = props => {
         autoComplete,
         bsPrefix,
         children,
+        className,
         defaultValue,
         disabled,
         id,
@@ -36,6 +37,7 @@ const CFControl = props => {
             autoComplete={autoComplete}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             defaultValue={defaultValue}
             disabled={disabled}
             id={"fControl_".concat(id)}
@@ -68,6 +70,7 @@ CFControl.propTypes = {
     autoComplete: PropTypes.string,
     bsPrefix: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
     defaultValue: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,

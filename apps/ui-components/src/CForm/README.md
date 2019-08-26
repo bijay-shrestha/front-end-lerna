@@ -33,6 +33,8 @@ bsPrefix: string - defaultValue: {'form'} - Change the underlying component CSS 
 
 children: node - Children of Form Component,
 
+className: string - Css classname for additional styling.
+
 id: string - Unique id of the form component,
 
 inline: boolean - defaultValue: false -	Display the series of labels, form controls, and buttons on a single horizontal row,

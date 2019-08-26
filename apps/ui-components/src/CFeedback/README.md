@@ -37,7 +37,12 @@ Then use it as,
 
 ```text
 as: elementType - You can use a custom element type for this component.
+
+className: string - Css classname for additional styling.
+
 id: string - Id of the component.
+
 message: string - A feedback message to display.
+
 type: 'valid' | 'invalid' -  defaultValue:'valid' - Specify whether the feedback is for valid or invalid fields.                                                  
 ```

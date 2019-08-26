@@ -23,6 +23,7 @@ Then simply use it,
 _ ref: ReactRef - The FormGroup ref will be forwarded to the underlying element. Unless the FormGroup is rendered as a composite component, it will be a DOM node, when resolved.
 as: elementType - You can use a custom element type for this component.
 bsPrefix: string - defaultValue: 'form-group' - Change the underlying component CSS base class name and modifier class names prefix. This is an escape hatch for working with heavily customized bootstrap css.
+className: string - Css classname for additional styling.
 column: boolean - defaultValue: false - Renders the FormLabel as a <Col> component (accepting all the same props), as well as adding additional styling for horizontal forms.
 htmlFor: string - Uses controlId from <FormGroup> if not explicitly specified.
 id: string - id of the FormGroup component.

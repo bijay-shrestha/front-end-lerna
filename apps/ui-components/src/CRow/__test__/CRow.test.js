@@ -22,6 +22,7 @@ describe('CRow Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
+            'className',
             'id',
             'noGutters'
         ];

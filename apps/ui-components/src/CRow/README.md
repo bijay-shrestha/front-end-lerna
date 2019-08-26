@@ -39,6 +39,8 @@ bsPrefix string - defaultValue: 'row' - Change the underlying component CSS base
 
 children: node - Children components.
 
+className: string - Css classname for additional styling.
+
 id: string - Id of the component.
 
 noGutters: boolean - defaultValue: false - 	

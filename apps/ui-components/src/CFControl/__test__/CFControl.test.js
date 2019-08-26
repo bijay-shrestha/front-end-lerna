@@ -25,6 +25,7 @@ describe('CFControl Component Tests', () => {
             'autoComplete',
             'bsPrefix',
             'children',
+            'className',
             'defaultValue',
             'disabled',
             'id',
