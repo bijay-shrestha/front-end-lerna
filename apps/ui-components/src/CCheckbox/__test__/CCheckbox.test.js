@@ -39,6 +39,7 @@ describe('CCheckbox Tests', () => {
             'type',
             '_ref',
             'children',
+            'className',
             'custom',
             'disabled',
             'feedback',

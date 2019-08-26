@@ -7,6 +7,7 @@ const CCol = props => {
         as,
         bsPrefix,
         children,
+        className,
         id,
         lg,
         md,
@@ -19,6 +20,7 @@ const CCol = props => {
             as={as}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             id={"col_".concat(id)}
             lg={lg}
             md={md}

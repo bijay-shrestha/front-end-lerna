@@ -40,6 +40,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-select": "^3.0.4",
@@ -68,6 +69,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.12.0"
   }
 }

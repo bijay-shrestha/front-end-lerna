@@ -8,6 +8,7 @@ const CForm = props => {
         as,
         bsPrefix,
         children,
+        className,
         id,
         inline,
         noValidate,
@@ -20,6 +21,7 @@ const CForm = props => {
             as={as}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             id={"form".concat("_").concat(id)}
             inline={inline}
             noValidate={noValidate}

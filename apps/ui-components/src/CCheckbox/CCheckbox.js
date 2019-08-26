@@ -8,6 +8,7 @@ const CCheckbox = props => {
         label,
         ref,
         children,
+        className,
         custom,
         disabled,
         feedback,
@@ -15,6 +16,7 @@ const CCheckbox = props => {
         isInvalid,
         isValid,
         title,
+        type,
         bsPrefix,
         onChange
     } = props;
@@ -24,9 +26,10 @@ const CCheckbox = props => {
             test-id="c-checkbox"
             id={label.concat('_').concat(id)}
             label={label}
-            type='checkbox'
+            type={type}
             _ref={ref}
             children={children}
+            className={className}
             custom={custom}
             disabled={disabled}
             feedback={feedback}
@@ -42,28 +45,30 @@ const CCheckbox = props => {
 
 CCheckbox.defaultProps = {
     type: 'checkbox',
-    onChange: () => {}
+    onChange: () => {
+    }
 };
 
 CCheckbox.propTypes = {
     id: PropTypes.string.isRequired, // must be unique
-    label: PropTypes.string.isRequired || PropTypes.node,
+    label: PropTypes.oneOfType([
+        PropTypes.string.isRequired,
+        PropTypes.node
+    ]),
     _ref: PropTypes.oneOfType([
-        PropTypes.func, // for legacy refs
+        PropTypes.func,
         PropTypes.shape({current: PropTypes.instanceOf(Element)})
     ]),
     children: PropTypes.node,
-    custom: PropTypes.bool, // use Bootstrap's custom form elements to replace the browser defaults
-    disabled: PropTypes.bool, // to manually disable or enable the checkbox
-    feedback: PropTypes.node, // message to display when the input is in a validation state
-    inline: PropTypes.bool, // add class 'form-check-inline' to bring checkboxes on the same horizontal line
-    isInvalid: PropTypes.bool, // manually style the input as invalid, shows in red
-    isValid: PropTypes.bool, // manually style the input as valid, shows in green
-    title: PropTypes.string, // label's title property
-    bsPrefix: PropTypes.string, //default 'form-check'. Change the underlying component
-    // CSS base class name and modifier class names prefix.
-    // This is an escape hatch for working with heavily
-    // customized bootstrap css.
+    className: PropTypes.string,
+    custom: PropTypes.bool,
+    disabled: PropTypes.bool,
+    feedback: PropTypes.node,
+    inline: PropTypes.bool,
+    isInvalid: PropTypes.bool,
+    isValid: PropTypes.bool,
+    title: PropTypes.string,
+    bsPrefix: PropTypes.string,
     onChange: PropTypes.func.isRequired
 };
 

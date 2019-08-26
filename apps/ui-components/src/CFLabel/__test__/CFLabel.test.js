@@ -26,6 +26,7 @@ describe('CFLabel Component Tests', () => {
             '_ref',
             'as',
             'bsPrefix',
+            'className',
             'column',
             'htmlFor',
             'id',

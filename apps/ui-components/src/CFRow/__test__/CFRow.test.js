@@ -22,6 +22,7 @@ describe('CFRow Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
+            'className',
             'id'
         ];
         let propsOfCrow = Object.keys(wrapper.find('#fRow_test').props());

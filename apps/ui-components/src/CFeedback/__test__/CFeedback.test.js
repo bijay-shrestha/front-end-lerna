@@ -24,6 +24,7 @@ describe('CFeedback Component Tests', () => {
     it('should have all props available', () => {
         let propsAvailable = [
             'as',
+            'className',
             'id',
             'type'
         ];

@@ -44,6 +44,36 @@ class FormControlComponents extends PureComponent {
 
                 </CRow>
 
+                <CRow id="number">
+                    <CCol id="numberCol" xl={6}>
+                        <CFormGroup
+                            id="number">
+                            <CFLabel
+                                id="number"
+                                labelName="Number"
+                            />
+                            <CFControl
+                                id="number"
+                                type="number"
+                                name="number"
+                                placeholder="Enter your number"
+                                size="lg"
+                                required={true}
+                                min={1}
+                                max={99}
+                                onChange={(e) => console.log(e.target.value)}
+                            />
+                            <CFeedback id="email" message="Number looks good."/>
+                            <CFeedback id="email" message="Number looks bad." type="invalid"/>
+                        </CFormGroup>
+                        <CFormGroup>
+                        </CFormGroup>
+
+                    </CCol>
+
+                </CRow>
+
+
                 <CFRow id="passwordRow">
                     <CCol id="passLabel" md={6}>
                         <CFormGroup id="password">
@@ -55,8 +85,11 @@ class FormControlComponents extends PureComponent {
                                 id="password"
                                 type="password"
                                 placeholder="Your password here."
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 size="lg"
                                 autoComplete="off" />
+                            <CFeedback id="password" message="Must contain at least one number and one
+                            uppercase and lowercase letter, and at least 8 or more characters." type="invalid"/>
                         </CFormGroup>
                     </CCol>
                 </CFRow>

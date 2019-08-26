@@ -5,6 +5,7 @@ import Proptypes from 'prop-types';
 const CFeedback = props => {
     const {
         as,
+        className,
         message,
         id,
         type
@@ -12,6 +13,7 @@ const CFeedback = props => {
     return (
         <FormControl.Feedback
             as={as}
+            className={className}
             id={"feedback_".concat(id)}
             type={type}
         >

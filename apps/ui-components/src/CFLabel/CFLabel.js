@@ -17,12 +17,13 @@ class CFLabel extends PureComponent {
     };
 
     getPropsForLabel = () => {
-        const {_ref, as, bsPrefix, column, htmlFor, id, srOnly} = this.props;
+        const {_ref, as, bsPrefix,className, column, htmlFor, id, srOnly} = this.props;
         return (
             {
                 '_ref': _ref,
                 'as': as,
                 'bsPrefix': bsPrefix,
+                'className':className,
                 'column': column,
                 'htmlFor': htmlFor,
                 'id': "label_".concat(id),
@@ -52,6 +53,7 @@ CFLabel.propTypes = {
     ]),
     as: PropTypes.elementType,
     bsPrefix: PropTypes.string,
+    className: PropTypes.string,
     column: PropTypes.bool,
     htmlFor: PropTypes.string,
     id: PropTypes.string.isRequired,

@@ -15,6 +15,7 @@ import CFRow from './src/CFRow';
 import CCol from './src/CCol';
 import CRow from './src/CRow';
 import CFeedback from './src/CFeedback';
+import CScrollbar from './src/CScrollbar';
 
 export {
     CButton,
@@ -33,5 +34,6 @@ export {
     CFRow,
     CCol,
     CRow,
-    CFeedback
+    CFeedback,
+    CScrollbar
 }

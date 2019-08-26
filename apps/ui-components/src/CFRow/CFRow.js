@@ -7,6 +7,7 @@ const CFRow = props => {
         as,
         bsPrefix,
         children,
+        className,
         id
     } = props;
     return (
@@ -14,6 +15,7 @@ const CFRow = props => {
             as={as}
             bsPrefix={bsPrefix}
             children={children}
+            className={className}
             id={"fRow_".concat(id)}
         />
     )

@@ -20,6 +20,7 @@ describe('CCol Component Tests', () => {
             'as',
             'bsPrefix',
             'children',
+            'className',
             'id',
             'lg',
             'md',
