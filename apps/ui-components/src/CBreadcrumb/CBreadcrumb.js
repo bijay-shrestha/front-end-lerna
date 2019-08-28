@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import Proptypes from 'prop-types';
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import {withRouter} from 'react-router-dom';
-import {TryCatchHandler} from "../../../commons";
+import {TryCatchHandler} from "@cogent/commons";
 
 class CBreadcrumb extends PureComponent {
     state = {

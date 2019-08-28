@@ -1,5 +1,7 @@
-import TryCatchHandler from './src/genericTryCatch';
+import TryCatchHandler from './src/try-catch-wrapper';
+import ApiError from './src/api-error';
 
 export {
-    TryCatchHandler
+    TryCatchHandler,
+    ApiError
 }
