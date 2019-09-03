@@ -52,9 +52,15 @@ export default {
 
     // ********************************* PATCH REQUESTS **********************************//
 
-    patch: (path, id) => API_WRAPPER(axios.patch(`${SERVER_DOMAIN}${createPathWithPathVariable(path, id)}`, DEFAULT_HEADER)),
+    patch: (path, id, data) => API_WRAPPER(axios.patch(`${SERVER_DOMAIN}${createPathWithPathVariable(path, id)}`, data, DEFAULT_HEADER)),
 
     // ********************************* END PATCH REQUESTS *******************************//
+
+    // ********************************* PUT REQUESTS **********************************//
+
+    put: (path, data) => API_WRAPPER(axios.put(`${SERVER_DOMAIN}${path}`, data, DEFAULT_HEADER)),
+
+    // ********************************* END PUT REQUESTS *******************************//
 
     // ********************************* DELETE REQUESTS **********************************//
 

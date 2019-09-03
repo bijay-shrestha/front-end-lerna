@@ -1,6 +1,6 @@
 export default {
     errorHandler: error => {
-        const {status} = error;
+        const {status} = error.response;
         switch (status) {
             case 400:
             case 401:
@@ -11,14 +11,14 @@ export default {
             case 500:
             case 502:
                 console.log("Error Handler says:", error);
-                return error.response.data;
+                throw error.response.data;
             default:
                 console.log("Error Handler says:", error);
                 let errorObj = {
                     errorMsg: error.message,
                     stack: error.stack
                 };
-                return errorObj;
+                throw errorObj;
         }
     }
 

@@ -10,7 +10,8 @@ axios.interceptors.request.use(
         console.log("Request Interceptor", requestConfig);
         return requestConfig;
     }, error => {
-        return ApiError.errorHandler(error);
+        // return ApiError.errorHandler(error);
+        throw error;
     }
 );
 
@@ -21,7 +22,8 @@ axios.interceptors.response.use(
         console.log("Response Interceptor", response);
         return response;
     }, error => {
-        return ApiError.errorHandler(error);
+        // return ApiError.errorHandler(error);
+        throw error;
     }
 );
 
