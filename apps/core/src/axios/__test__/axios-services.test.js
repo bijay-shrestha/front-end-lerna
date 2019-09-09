@@ -285,7 +285,11 @@ describe('Testing Axios apis', () => {
 
     it('should call axios.delete with path and header when del is invoked',
         done => {
-            Axios.del("/deleteTest").then(onSuccess);
+            let data = {
+                id: 1,
+                remarks: "DeleteTest"
+            };
+            Axios.del("/deleteTest", data).then(onSuccess);
             let params = {
                 onSuccess,
                 responseObject: {
@@ -294,7 +298,8 @@ describe('Testing Axios apis', () => {
                 methodType: 'delete',
                 url: '/deleteTest',
                 headers: defaultHeaders,
-                done
+                done,
+                data
             };
             mockRequestsAndAssert(params);
         }
@@ -528,7 +533,7 @@ describe('Testing Axios apis', () => {
                 data: 'Server Error'
             }
         };
-        const promise = Axios.del('/test',);
+        const promise = Axios.del('/test', {id: 1, remarks: "DeleteTest"});
         let paramsForTest = {
             errorResponse: errorResp,
             promise,

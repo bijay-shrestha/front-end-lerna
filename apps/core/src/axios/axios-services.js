@@ -16,6 +16,8 @@ const DEFAULT_HEADER = Headers.DEFAULT_HEADER();
 
 const FILE_HEADER = Headers.FILE_HEADER();
 
+const DELETE_API_HEADER = Headers.DELETE_API_HEADER();
+
 // ********************************* END GENERIC REQUESTS **********************************//
 
 export default {
@@ -63,8 +65,7 @@ export default {
     // ********************************* END PUT REQUESTS *******************************//
 
     // ********************************* DELETE REQUESTS **********************************//
-
-    del: (path) => API_WRAPPER(axios.delete(`${SERVER_DOMAIN}${path}`, DEFAULT_HEADER))
+    del: (path, data) => API_WRAPPER(axios.delete(`${SERVER_DOMAIN}${path}`, {headers: DELETE_API_HEADER, data}))
 
     // ********************************* END DELETE REQUESTS ******************************//
 }

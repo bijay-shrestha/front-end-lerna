@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {ApiError} from "@cogent/commons";
 
 axios.defaults.baseURL = "";
 

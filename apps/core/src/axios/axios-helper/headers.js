@@ -16,5 +16,12 @@ export default {
                 'Content-Type': 'application/json',
             },
         };
+    },
+    DELETE_API_HEADER: () => {
+        return {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'ABCDEFGHIJKL'
+        }
     }
 }
