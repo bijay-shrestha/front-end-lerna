@@ -7,7 +7,8 @@ import {mockAndAssertForApiRejection, mockRequestsAndAssert} from "../axios-help
 describe('Testing Axios apis', () => {
     let onSuccess,
         defaultHeaders = Headers.DEFAULT_HEADER().headers,
-        fileHeaders = Headers.FILE_HEADER();
+        fileHeaders = Headers.FILE_HEADER(),
+        deleteReqHeaders = Headers.DELETE_API_HEADER();
 
     beforeEach(() => {
         onSuccess = jest.fn();
@@ -297,7 +298,7 @@ describe('Testing Axios apis', () => {
                 },
                 methodType: 'delete',
                 url: '/deleteTest',
-                headers: defaultHeaders,
+                headers: deleteReqHeaders,
                 done,
                 data
             };
@@ -355,7 +356,6 @@ describe('Testing Axios apis', () => {
         };
         mockAndAssertForApiRejection(paramsForTest);
     });
-
 
     it('should handle rejection and return error data when getWithRequestParams request is rejected', done => {
         const errorResp = {
@@ -442,7 +442,6 @@ describe('Testing Axios apis', () => {
         mockAndAssertForApiRejection(paramsForTest);
     });
 
-
     it('should handle rejection and return error data when postWithRequestParams request is rejected', done => {
         const errorResp = {
             response: {
@@ -508,7 +507,6 @@ describe('Testing Axios apis', () => {
         };
         mockAndAssertForApiRejection(paramsForTest);
     });
-
 
     it('should handle rejection and return error data when put request is rejected', done => {
         const errorResp = {
