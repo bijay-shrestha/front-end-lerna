@@ -18,6 +18,11 @@ export const createPathWithPathVariable = (path, pathVariable) => {
     return (path + "/" + pathVariable);
 };
 
+export const addObjectAsRequestParam = (path, objVariable, value) => {
+    let _encodedObjectValue = encodeURIComponent(JSON.stringify(value));
+    return (path + "?" + objVariable + "=" + _encodedObjectValue);
+};
+
 export const mockRequestsAndAssert = params => {
     const {onSuccess, responseObject, methodType, url, headers, done, data, responseType} = params;
     moxios.wait(() => {
@@ -28,6 +33,7 @@ export const mockRequestsAndAssert = params => {
                 expect(onSuccess).toHaveBeenCalled();
                 expect(req.config.method).toEqual(methodType);
                 expect(req.config.url).toEqual(url);
+                console.log(req.config.headers);
                 headers && expect(req.config.headers).toEqual(headers);
                 data && expect(req.config.data).toEqual(JSON.stringify(data));
                 responseType && expect(req.config.responseType).toEqual(responseType);
@@ -39,7 +45,7 @@ export const mockRequestsAndAssert = params => {
 
 
 export const mockAndAssertForApiRejection = params => {
-    const {errorResponse,promise,done} = params;
+    const {errorResponse, promise, done} = params;
     moxios.wait(() => {
         let req = moxios.requests.mostRecent();
         req.reject(errorResponse);

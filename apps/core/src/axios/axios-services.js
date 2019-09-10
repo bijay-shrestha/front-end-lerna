@@ -1,6 +1,11 @@
 import axios from "axios";
 import {TryCatchHandler} from "@cogent/commons";
-import {convertObjectToRequestParam, createPathWithPathVariable, Headers} from "./axios-helper";
+import {
+    addObjectAsRequestParam,
+    convertObjectToRequestParam,
+    createPathWithPathVariable,
+    Headers
+} from "./axios-helper";
 
 // ********************************* START GENERIC REQUESTS ********************************//
 
@@ -17,6 +22,10 @@ const DEFAULT_HEADER = Headers.DEFAULT_HEADER();
 const FILE_HEADER = Headers.FILE_HEADER();
 
 const DELETE_API_HEADER = Headers.DELETE_API_HEADER();
+
+const MULTIPART_HEADER = Headers.MULTIPART_HEADER();
+
+console.log("MMmajsdbhajs",MULTIPART_HEADER);
 
 // ********************************* END GENERIC REQUESTS **********************************//
 
@@ -49,7 +58,7 @@ export default {
 
     postForFile: (path, data) => API_WRAPPER(POST(path, data, FILE_HEADER)),
 
-
+    postForMultipart: (path, paramVariable, data) => API_WRAPPER(POST(addObjectAsRequestParam(path, paramVariable, data)), MULTIPART_HEADER),
     // ********************************* END POST REQUESTS *******************************//
 
     // ********************************* PATCH REQUESTS **********************************//
@@ -61,6 +70,8 @@ export default {
     // ********************************* PUT REQUESTS **********************************//
 
     put: (path, data) => API_WRAPPER(axios.put(`${SERVER_DOMAIN}${path}`, data, DEFAULT_HEADER)),
+
+    putWithMultiPart: (path, paramVariable, data) => API_WRAPPER(axios.put(addObjectAsRequestParam(path, paramVariable, data), MULTIPART_HEADER)),
 
     // ********************************* END PUT REQUESTS *******************************//
 

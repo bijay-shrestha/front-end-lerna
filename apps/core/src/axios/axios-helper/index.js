@@ -1,8 +1,9 @@
 import Headers from './headers';
-import {convertObjectToRequestParam, createPathWithPathVariable} from './utils';
+import {convertObjectToRequestParam, createPathWithPathVariable, addObjectAsRequestParam} from './utils';
 
 export {
     Headers,
     convertObjectToRequestParam,
-    createPathWithPathVariable
+    createPathWithPathVariable,
+    addObjectAsRequestParam
 }

@@ -8,8 +8,8 @@ describe('Testing Axios apis', () => {
     let onSuccess,
         defaultHeaders = Headers.DEFAULT_HEADER().headers,
         fileHeaders = Headers.FILE_HEADER(),
-        deleteReqHeaders = Headers.DELETE_API_HEADER();
-
+        deleteReqHeaders = Headers.DELETE_API_HEADER(),
+        multiPartHeaders = Headers.MULTIPART_HEADER();
     beforeEach(() => {
         onSuccess = jest.fn();
         moxios.install();
@@ -242,6 +242,31 @@ describe('Testing Axios apis', () => {
         }
     );
 
+    it('should call axios.post with path, reqParam with Object value and headerFormMultipart when postForMultipart is invoked',
+        done => {
+            let data = {
+                "name": "axios"
+            };
+
+            const encodedData = encodeURIComponent(JSON.stringify(data));
+
+            Axios.postForMultipart("/postTest", "request", data).then(onSuccess);
+            let params = {
+                onSuccess,
+                responseObject: {
+                    status: 200,
+                    testName: "post for file"
+                },
+                methodType: 'post',
+                url: '/postTest?request=' + encodedData,
+                headers: multiPartHeaders.headers,
+                done,
+                encodedData
+            };
+            mockRequestsAndAssert(params);
+        }
+    );
+
     it('should call axios.patch with path, id, data and header when patch is invoked',
         done => {
             let data = {
@@ -283,6 +308,33 @@ describe('Testing Axios apis', () => {
             mockRequestsAndAssert(params);
         }
     );
+
+    it('should call axios.put with path, reqParam with Object value and headerFormMultipart when putWithMultiPart is invoked',
+        done => {
+            let data = {
+                "name": "axios"
+            };
+
+            const encodedData = encodeURIComponent(JSON.stringify(data));
+
+            Axios.putWithMultiPart("/putTest", "request", data).then(onSuccess);
+            let params = {
+                onSuccess,
+                responseObject: {
+                    status: 200,
+                    testName: "put for multipart"
+                },
+                methodType: 'put',
+                url: '/putTest?request=' + encodedData,
+                headers: multiPartHeaders.headers,
+                done,
+                encodedData
+            };
+            mockRequestsAndAssert(params);
+        }
+    );
+
+
 
     it('should call axios.delete with path and header when del is invoked',
         done => {

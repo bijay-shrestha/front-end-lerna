@@ -23,5 +23,12 @@ export default {
             'Content-Type': 'application/json',
             'Authorization': 'ABCDEFGHIJKL'
         }
+    },
+    MULTIPART_HEADER: () => {
+        return {
+            headers: {
+                'Content-Type': 'mediaType/form-data'
+            },
+        }
     }
 }
