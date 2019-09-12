@@ -1,6 +1,8 @@
 export default {
     errorHandler: error => {
-        const {status} = error.response;
+        const {response} = error;
+        const status = response ? response.status : '';
+
         switch (status) {
             case 400:
             case 401:
