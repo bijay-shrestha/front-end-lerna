@@ -27,7 +27,8 @@ export default {
     MULTIPART_HEADER: () => {
         return {
             headers: {
-                'Content-Type': 'mediaType/form-data'
+                'Accept': 'application/json',
+                'Content-Type': 'multipart/form-data'
             },
         }
     }

@@ -335,7 +335,6 @@ describe('Testing Axios apis', () => {
     );
 
 
-
     it('should call axios.delete with path and header when del is invoked',
         done => {
             let data = {
@@ -544,6 +543,25 @@ describe('Testing Axios apis', () => {
         mockAndAssertForApiRejection(paramsForTest);
     });
 
+    it('should handle rejection and return error data when postForMultipart request is rejected', done => {
+        const errorResp = {
+            response: {
+                status: 404,
+                data: 'Not found'
+            }
+        };
+        let data = {
+            "name": "axios"
+        };
+        const promise = Axios.postForMultipart("/postTest", "request", data);
+        let paramsForTest = {
+            errorResponse: errorResp,
+            promise,
+            done
+        };
+        mockAndAssertForApiRejection(paramsForTest);
+    });
+
     it('should handle rejection and return error data when patch request is rejected', done => {
         const errorResp = {
             response: {
@@ -568,6 +586,27 @@ describe('Testing Axios apis', () => {
             }
         };
         const promise = Axios.put('/test', {test: "data test"});
+        let paramsForTest = {
+            errorResponse: errorResp,
+            promise,
+            done
+        };
+        mockAndAssertForApiRejection(paramsForTest);
+    });
+
+
+    it('should handle rejection and return error data when put request is rejected', done => {
+        const errorResp = {
+            response: {
+                status: 500,
+                data: 'Server Error'
+            }
+        };
+        let data = {
+            "name": "axios"
+        };
+
+        const promise = Axios.putWithMultiPart("/putTest", "request", data);
         let paramsForTest = {
             errorResponse: errorResp,
             promise,

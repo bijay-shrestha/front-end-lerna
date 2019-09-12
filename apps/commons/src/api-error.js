@@ -15,7 +15,7 @@ export default {
             default:
                 console.log("Error Handler says:", error);
                 let errorObj = {
-                    errorMsg: error.message,
+                    errorMessage: error.message,
                     stack: error.stack
                 };
                 throw errorObj;
