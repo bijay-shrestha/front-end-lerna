@@ -8,7 +8,7 @@ export default {
             return response;
         } catch (error) {
             console.log("Catched:", error);
-            return ApiError.errorHandler(error);
+            return ApiError.errorHandler(error instanceof Promise ? await error : error);
         }
     }
 }
