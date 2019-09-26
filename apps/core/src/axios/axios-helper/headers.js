@@ -4,7 +4,6 @@ export default {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'ABCDEFGHIJKL'
             },
         }
     },
@@ -21,7 +20,6 @@ export default {
         return {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': 'ABCDEFGHIJKL'
         }
     },
     MULTIPART_HEADER: () => {

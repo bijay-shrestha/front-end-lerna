@@ -80,6 +80,7 @@ const optionsArr = [
 ];
 
 function App() {
+    console.log('Admin base url',process.env.REACT_APP_API_BASE);
     return (
         <div className="App">
             <header className="mb-4 text-center">.
