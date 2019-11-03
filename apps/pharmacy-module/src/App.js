@@ -6,7 +6,7 @@ import FormControlComponents from "./FormControlComponents";
 
 function App() {
     // const SERVER_DOMAIN = config.get('host') + (config.has('port') ? (":" + config.get('port')) : "");
-    console.log("Server ", SERVER_DOMAIN);
+    // console.log("Server ", SERVER_DOMAIN);
     return (
         <div>
             <CForm
